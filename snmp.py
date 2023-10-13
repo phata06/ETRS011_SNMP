@@ -3,7 +3,7 @@
 from pysnmp.hlapi import *
 
 ## Les commandes si elles étaient lancé sur un terminale :
-# $ snmpget -v2c -c public 192.168.176.2 sysLocation.0 sysDescr.0
+# $ snmpget -v2c -c passprojet 192.168.176.2 sysLocation.0 sysDescr.0
 # $ snmpget -v3 -l authPriv -u user1 -a SHA -A miracle2022 -x AES -X power2022 192.168.140.140 sysLocation.0 sysDescr.0
 
 # partie data pour les OID sysLocation.0 sysDescr.0
