@@ -1,0 +1,20 @@
+{
+    "equipements": [
+        {
+            "Nom": "zdzd",
+            "AdresseIP": "14141",
+            "port": "1414",
+            "community": "jtyjt",
+            "OIDs": "2525"
+        },
+        {
+            "Nom": "ordi prof",
+            "AdresseIP": "12.25",
+            "port": "254",
+            "community": "fhh",
+            "OIDs": "2541,25,2524,222"
+        }
+    ]
+}
+
+
