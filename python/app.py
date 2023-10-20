@@ -9,7 +9,7 @@ from flask import Flask, render_template, request, redirect, url_for,session
 from equipment_manager import EquipmentManager 
 
 app = Flask(__name__)
-manager = EquipmentManager('equipement.json')
+manager = EquipmentManager('equipement.js')
 
 @app.route('/')
 def index():
@@ -24,8 +24,8 @@ def add_equipment():
     adresse_ip = request.form['adresse_ip']
     port = request.form['port']
     communaute = request.form['communaute']
-    oids = request.form['oids']
-    manager.add_equipment(nom, adresse_ip, port, communaute, oids)
+    
+    manager.add_equipment(nom, adresse_ip, port, communaute)
     return redirect(url_for('index'))
 
 @app.route('/remove_equipment', methods=['POST'])
@@ -36,6 +36,7 @@ def remove_equipment():
     return redirect(url_for('index'))
 
 #----------------------- Partie 2 ------------------
+
 app.secret_key = 'user'  # Clé secrète pour la gestion des sessions
 
 # Une structure de données (à des fins de démonstration) pour stocker les informations d'identification
@@ -102,6 +103,6 @@ def get_equipment_info():
     
 if __name__ == "__main__":
     from waitress import serve
-    serve(app, host="127.0.0.1", port=8080)
+    serve(app, host="127.0.0.1", port=8000)
 
 

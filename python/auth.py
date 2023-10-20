@@ -4,7 +4,7 @@ Created on Fri Oct 13 15:34:09 2023
 
 @author: user
 """
-
+from gevent.pywsgi import WSGIServer
 from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
@@ -34,6 +34,8 @@ def page_protegee():
     return "Bienvenue sur la page protégée !"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    #app.run(port=8000, debug=True)
+    http_server = WSGIServer(('', 5000), app)
+    http_server.serve_forever()
 
 

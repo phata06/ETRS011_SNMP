@@ -25,12 +25,12 @@ class EquipmentManager:
         with open(self.filename, 'w') as file:
             json.dump(equipment_info, file, indent=4)
 
-    def add_equipment(self, nom, adresse_ip, port, community, oids):
+    def add_equipment(self, nom, adresse_ip, port, community):
         for equipement in self.equipment_list:
             if equipement['Nom'] == nom and equipement['AdresseIP'] == adresse_ip:
                 print(f"L'équipement '{nom}' avec l'adresse IP '{adresse_ip}' existe déjà.")
                 return
-        new_equipment = {'Nom': nom, 'AdresseIP': adresse_ip, 'port': port, 'community': community, 'OIDs': oids}
+        new_equipment = {'Nom': nom, 'AdresseIP': adresse_ip, 'port': port, 'community': community}
         self.equipment_list.append(new_equipment)
         self.save_equipment_list()
 
@@ -46,7 +46,7 @@ class EquipmentManager:
 
 # Utilisation de la classe EquipmentManager
 if __name__ == '__main__':
-    manager = EquipmentManager('equipement.json')
+    manager = EquipmentManager('materiel.json')
     
     # Ajouter un équipement
     #manager.add_equipment('Equipement1', '192.168.1.1', 80, 'public')
