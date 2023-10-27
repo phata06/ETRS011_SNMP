@@ -196,3 +196,37 @@ WARNING:Journal_exemple:avertissement
 CRITICAL:Journal_exemple:erreur grave
 INFO:root:Ceci est un message de journalisation d'information.
 INFO:waitress:Serving on http://127.0.0.1:9000
+2023-10-27 17:17:46,074 - Journal_exemple - DEBUG - Information-Debug
+2023-10-27 17:17:46,074 - Journal_exemple - DEBUG - Information-Debug
+2023-10-27 17:17:46,074 - Journal_exemple - DEBUG - Information-Debug
+2023-10-27 17:17:46,074 - Journal_exemple - DEBUG - Information-Debug
+2023-10-27 17:17:46,074 - Journal_exemple - DEBUG - Information-Debug
+2023-10-27 17:17:46,074 - Journal_exemple - DEBUG - Information-Debug
+2023-10-27 17:17:46,074 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-10-27 17:17:46,074 - Journal_exemple - INFO - Message info
+2023-10-27 17:17:46,074 - Journal_exemple - INFO - Message info
+2023-10-27 17:17:46,074 - Journal_exemple - INFO - Message info
+2023-10-27 17:17:46,074 - Journal_exemple - INFO - Message info
+2023-10-27 17:17:46,074 - Journal_exemple - INFO - Message info
+2023-10-27 17:17:46,074 - Journal_exemple - INFO - Message info
+2023-10-27 17:17:46,074 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-10-27 17:17:46,074 - Journal_exemple - WARNING - avertissement
+2023-10-27 17:17:46,074 - Journal_exemple - WARNING - avertissement
+2023-10-27 17:17:46,074 - Journal_exemple - WARNING - avertissement
+2023-10-27 17:17:46,074 - Journal_exemple - WARNING - avertissement
+2023-10-27 17:17:46,074 - Journal_exemple - WARNING - avertissement
+2023-10-27 17:17:46,074 - Journal_exemple - WARNING - avertissement
+2023-10-27 17:17:46,074 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-10-27 17:17:46,074 - Journal_exemple - CRITICAL - erreur grave
+2023-10-27 17:17:46,074 - Journal_exemple - CRITICAL - erreur grave
+2023-10-27 17:17:46,074 - Journal_exemple - CRITICAL - erreur grave
+2023-10-27 17:17:46,074 - Journal_exemple - CRITICAL - erreur grave
+2023-10-27 17:17:46,074 - Journal_exemple - CRITICAL - erreur grave
+2023-10-27 17:17:46,074 - Journal_exemple - CRITICAL - erreur grave
+2023-10-27 17:17:46,074 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
