@@ -1,0 +1,141 @@
+Information-Debug
+Message info
+avertissement
+Information-Debug
+Information-Debug
+Message info
+Message info
+avertissement
+avertissement
+Information-Debug
+Information-Debug
+2023-10-27 16:48:16,436 - Journal_exemple - DEBUG - Information-Debug
+Message info
+Message info
+2023-10-27 16:48:16,437 - Journal_exemple - INFO - Message info
+avertissement
+avertissement
+2023-10-27 16:48:16,437 - Journal_exemple - WARNING - avertissement
+erreur grave
+erreur grave
+2023-10-27 16:48:16,438 - Journal_exemple - CRITICAL - erreur grave
+2023-10-27 16:51:33,653 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-10-27 16:51:33,653 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-10-27 16:51:33,653 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-10-27 16:51:33,653 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+INFO:root:L'utilisateur root s'est connecté avec succès.
+2023-10-27 16:54:55,178 - Journal_exemple - DEBUG - Information-Debug
+2023-10-27 16:54:55,178 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-10-27 16:54:55,178 - Journal_exemple - INFO - Message info
+2023-10-27 16:54:55,178 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-10-27 16:54:55,178 - Journal_exemple - WARNING - avertissement
+2023-10-27 16:54:55,178 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-10-27 16:54:55,178 - Journal_exemple - CRITICAL - erreur grave
+2023-10-27 16:54:55,178 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+INFO:root:L'utilisateur root s'est connecté avec succès.
+ERROR:app:Exception on /voir_logs [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "d:\users\user\desktop\etrs011_snmp\python\app.py", line 162, in voir_logs
+    return render_template('logs.html', logs=logs)
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: logs.html
+ERROR:app:Exception on /voir_logs [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "d:\users\user\desktop\etrs011_snmp\python\app.py", line 162, in voir_logs
+    return render_template('logs.html', logs=logs)
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\user\.conda\envs\ETRS013\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: logs.html
+2023-10-27 16:56:08,088 - Journal_exemple - DEBUG - Information-Debug
+2023-10-27 16:56:08,088 - Journal_exemple - DEBUG - Information-Debug
+2023-10-27 16:56:08,088 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-10-27 16:56:08,088 - Journal_exemple - INFO - Message info
+2023-10-27 16:56:08,088 - Journal_exemple - INFO - Message info
+2023-10-27 16:56:08,088 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-10-27 16:56:08,088 - Journal_exemple - WARNING - avertissement
+2023-10-27 16:56:08,088 - Journal_exemple - WARNING - avertissement
+2023-10-27 16:56:08,088 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-10-27 16:56:08,088 - Journal_exemple - CRITICAL - erreur grave
+2023-10-27 16:56:08,088 - Journal_exemple - CRITICAL - erreur grave
+2023-10-27 16:56:08,088 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-10-27 16:56:57,215 - Journal_exemple - DEBUG - Information-Debug
+2023-10-27 16:56:57,215 - Journal_exemple - DEBUG - Information-Debug
+2023-10-27 16:56:57,215 - Journal_exemple - DEBUG - Information-Debug
+2023-10-27 16:56:57,215 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-10-27 16:56:57,216 - Journal_exemple - INFO - Message info
+2023-10-27 16:56:57,216 - Journal_exemple - INFO - Message info
+2023-10-27 16:56:57,216 - Journal_exemple - INFO - Message info
+2023-10-27 16:56:57,216 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-10-27 16:56:57,216 - Journal_exemple - WARNING - avertissement
+2023-10-27 16:56:57,216 - Journal_exemple - WARNING - avertissement
+2023-10-27 16:56:57,216 - Journal_exemple - WARNING - avertissement
+2023-10-27 16:56:57,216 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-10-27 16:56:57,216 - Journal_exemple - CRITICAL - erreur grave
+2023-10-27 16:56:57,216 - Journal_exemple - CRITICAL - erreur grave
+2023-10-27 16:56:57,216 - Journal_exemple - CRITICAL - erreur grave
+2023-10-27 16:56:57,216 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000

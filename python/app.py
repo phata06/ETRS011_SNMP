@@ -4,14 +4,38 @@ Created on Fri Oct 13 14:12:01 2023
 
 @author: user
 """
+
 import json
 from flask import Flask, render_template, request, redirect, url_for,session
 from equipment_manager import EquipmentManager 
 from werkzeug.security import check_password_hash, generate_password_hash
+import logging
+
+logging.basicConfig( level=logging.DEBUG, filename='app.log')
+
+logger = logging.getLogger('Journal_exemple')
+logger.setLevel(logging.DEBUG)
+fh = logging.FileHandler('app.log')
+fh.setLevel(logging.DEBUG)
+logger.addHandler(fh)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+fh.setFormatter(formatter)
+logger.addHandler(fh)
+logger.debug('Information-Debug')
+logger.info('Message info')
+logger.warning('avertissement')
+logger.critical('erreur grave')
+#formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+#fh.setFormatter(formatter)
+
+
+logging.basicConfig(filename='app.log', level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
 
 app = Flask(__name__)
 manager = EquipmentManager('equipement.js')
 users_data = {}
+# Configurez le système de journalisation
 
 def load_users_data():
     try:
@@ -47,27 +71,7 @@ def remove_equipment():
 
 #----------------------- Partie 2 ------------------
 
-app.secret_key = 'user'  # Clé secrète pour la gestion des sessions
-
-# Une structure de données (à des fins de démonstration) pour stocker les informations d'identification
-
-# users = {
-#     'ndiaye': '1234',
-#     'nicolas': '5678'
-# }
-# users_data = load_users_data()
-# @app.route('/login', methods=['GET', 'POST'])
-# def login():
-#     if request.method == 'POST':
-#         username = request.form['username']
-#         password = request.form['password']
-#         if users.get(username) == password:
-#             session['logged_in'] = True
-#             return redirect(url_for('index'))
-#         else:
-#             return "Informations d'identification incorrectes. Veuillez réessayer."
-
-#     return render_template('auth.html')
+app.secret_key = 'user'  
 
 users_data = load_users_data()
 
@@ -86,6 +90,7 @@ def login():
             if check_password_hash(stored_password, password):
                 # Informations d'identification correctes, autorisez l'utilisateur
                 session['logged_in'] = True
+                logging.info(f"L'utilisateur {username} s'est connecté avec succès.")
                 return redirect(url_for('index'))
         
         # Informations d'identification incorrectes
@@ -122,12 +127,6 @@ def get_equipment_info():
 
 
 
-#@app.route('/')
-#def index():
-#    if not session.get('logged_in'):
-#        return redirect(url_for('login'))
-#    # Votre page "index.html" pour gérer les équipements
-#    return render_template('index.html')
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -155,8 +154,15 @@ def signup():
     
     return render_template('signup.html')
 
+@app.route('/voir_logs')
+def voir_logs():
+    with open('app.log', 'r') as log_file:
+        logs = log_file.read()
+    
+    return render_template('logs.html', logs=logs)
 
 
+logging.info("Ceci est un message de journalisation d'information.")
 
 
     
