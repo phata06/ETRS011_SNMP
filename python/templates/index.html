@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Liste des équipements</title>
+    
 </head>
 <body>
     <h1>Liste des équipements</h1>
@@ -54,6 +55,12 @@
 
 	
 	
+{% if session.logged_in %}
+    <a href="{{ url_for('logout') }}">Déconnexion</a>
+{% endif %}
+{{ session.logged_in }}
+
+
 	
 	
 	
