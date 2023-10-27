@@ -6,7 +6,7 @@ Created on Fri Oct 13 14:12:01 2023
 """
 import json
 from flask import Flask, render_template, request, redirect, url_for,session
-from equipment_manager import EquipmentManager 
+from equipment_manager import EquipmentManager
 from werkzeug.security import check_password_hash, generate_password_hash
 
 app = Flask(__name__)
@@ -34,7 +34,7 @@ def add_equipment():
     adresse_ip = request.form['adresse_ip']
     port = request.form['port']
     communaute = request.form['communaute']
-    
+
     manager.add_equipment(nom, adresse_ip, port, communaute)
     return redirect(url_for('index'))
 
@@ -76,20 +76,21 @@ def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        
+
         # Vérifiez si le nom d'utilisateur existe dans les données utilisateur
         if username in users_data:
             # Récupérez le mot de passe haché de l'utilisateur
             stored_password = users_data[username]['password']
-            
+
             # Vérifiez si le mot de passe saisi correspond au mot de passe haché
             if check_password_hash(stored_password, password):
                 # Informations d'identification correctes, autorisez l'utilisateur
                 session['logged_in'] = True
                 return redirect(url_for('index'))
-        
+
         # Informations d'identification incorrectes
-        return "Informations d'identification incorrectes. Veuillez réessayer."
+        msg_alert = "Informations d'identification incorrectes. Veuillez réessayer."
+        return render_template('auth.html', msgAlert=msg_alert)
 
     return render_template('auth.html')
 
@@ -107,13 +108,13 @@ def logout():
 def get_equipment_info():
     selected_ip = request.form['selected_equipment']
     selected_equipment = None
-    
+
     # Recherchez l'équipement en fonction de l'adresse IP sélectionnée
     for equipment in manager.get_equipment_list():
         if equipment['AdresseIP'] == selected_ip:
             selected_equipment = equipment
             break
-    
+
     if selected_equipment:
         # Affichez les informations de l'équipement (par exemple, dans un modèle séparé)
         return render_template('equipment_info.html', equipment=selected_equipment)
@@ -142,27 +143,24 @@ def signup():
             'password': hashed_password,  # Vous devrez hacher le mot de passe pour des raisons de sécurité
             'email': email
         }
-        
+
         # Ajoutez l'utilisateur à votre variable users_data
         users_data[username] = new_user
-        
+
         # Enregistrez les modifications dans le fichier JSON
         with open('users.json', 'w') as f:
             json.dump(users_data, f)
-        
+
         # Redirigez l'utilisateur vers une page de confirmation ou de connexion
         return redirect(url_for('login'))
-    
+
     return render_template('signup.html')
 
 
 
 
 
-    
+
 if __name__ == "__main__":
     from waitress import serve
     serve(app, host="127.0.0.1", port=9000)
-
-
-

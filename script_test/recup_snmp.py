@@ -32,11 +32,17 @@ sortie_v3 = process_v3.stdout.read().decode()
 # Diviser la chaîne en une liste en fonction des sauts de ligne
 liste_lignes_v3 = sortie_v3.split('\n')
 
+# Enlever le dernier caractère de chaque ligne (qui est un point-virgule)
+for i, ligne in enumerate(liste_lignes):
+    liste_lignes[i] = ligne[:-1]
+
+for i, ligne in enumerate(liste_lignes_v3):
+    liste_lignes_v3[i] = ligne[:-1]
+
 # Afficher chaque ligne séparément
 for ligne in liste_lignes:
     print(ligne)
 
 print('-----------------------------------')
-
 for ligne in liste_lignes_v3:
     print(ligne)
