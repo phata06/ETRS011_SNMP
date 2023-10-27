@@ -5,13 +5,16 @@ Created on Fri Oct 13 14:12:01 2023
 @author: user
 """
 import json
-from flask import Flask, render_template, request, redirect, url_for,session
+from flask import Flask, render_template, request, redirect, url_for,session, jsonify
 from equipment_manager import EquipmentManager
 from werkzeug.security import check_password_hash, generate_password_hash
 
 app = Flask(__name__)
 manager = EquipmentManager('equipement.js')
 users_data = {}
+
+# Variable booléenne initiale
+etat_SNMP = False
 
 def load_users_data():
     try:
@@ -27,6 +30,14 @@ def index():
         return redirect(url_for('login'))
     equipment_list = manager.get_equipment_list()
     return render_template('index.html', equipment_list=equipment_list)
+
+@app.route('/toggle', methods=['POST'])
+def toggle():
+    global etat_SNMP
+    data = request.get_json()
+    new_state = data['newState']
+    etat_SNMP = new_state
+    return jsonify({"success": True})
 
 @app.route('/add_equipment', methods=['POST'])
 def add_equipment():

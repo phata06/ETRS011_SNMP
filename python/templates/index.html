@@ -2,7 +2,20 @@
 <html>
 <head>
     <title>Liste des équipements</title>
-    
+
+    <style>
+    #toggleButton {
+      background-color: #e7e7e7; /* Gray */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 8px;
+    }
+    </style>
 </head>
 <body>
     <h1>Liste des équipements</h1>
@@ -34,14 +47,14 @@
 
         <label for="communaute">Communauté:</label>
         <input type="text" name="communaute" required><br>
-		
+
 		<label for="oids">OIDs (séparés par des virgules):</label>
 		<input type="text" name="oid" pattern="^(\d+(\.\d+)*)?$"><br>
-		
+
         <button type="submit">Ajouter</button>
     </form>
-	
-	
+
+
 	<h2>Sélectionnez un équipement</h2>
 <form action="/get_equipment_info" method="post">
     <label for="selected_equipment">Équipement:</label>
@@ -53,16 +66,46 @@
     <button type="submit">Afficher les informations</button>
 </form>
 
-	
-	
+<br>
+	<button id="toggleButton" onclick="toggleState()">Lancer le Controlleur</button>
+<br>
+
 {% if session.logged_in %}
     <a href="{{ url_for('logout') }}">Déconnexion</a>
 {% endif %}
+
+<br>
+
 {{ session.logged_in }}
 
 
-	
-	
-	
+
+<script>
+      var isControllerRunning = false; // Nouvelle variable pour stocker l'état du bouton
+
+      function toggleState() {
+          var button = document.getElementById("toggleButton");
+
+          if (isControllerRunning) {
+            button.style.backgroundColor = "#4CAF50"; /* Green */
+            button.innerHTML = "Play Controlleur";
+            isControllerRunning = false;
+            sendToggleRequest(false);
+          } else {
+            button.style.backgroundColor = "#f44336"; /* Red */
+            button.innerHTML = "Stop Controlleur";
+            isControllerRunning = true;
+            sendToggleRequest(true);
+          }
+      }
+
+      function sendToggleRequest(newState) {
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "/toggle", true);
+          xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+          xhr.send(JSON.stringify({"newState": newState}));
+      }
+  </script>
+
 </body>
 </html>
