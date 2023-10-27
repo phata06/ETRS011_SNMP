@@ -2,54 +2,8 @@
 <html>
 <head>
     <title>Authentification</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            text-align: center;
-        }
-
-        .container {
-            margin: 100px auto;
-            width: 300px;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        h1 {
-            font-size: 24px;
-        }
-
-        label {
-            display: block;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        input[type="text"],
-        input[type="password"] {
-            width: 20%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-
-        button {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    
 </head>
 <body>
     <div class="container"></div>
@@ -64,8 +18,12 @@
 
     <a href="{{ url_for('signup') }}">Créer un compte</a>
 
+    <div class="alert">
+      {{ msgAlert }}
+    </div>
+
 
     <br>
-    
+
 </body>
 </html>
