@@ -1,8 +1,5 @@
 #!/bin/bash
 
-community=$1
-addrIP=$2
-
 # snmpwalk -v3 -l authPriv -u $2 -a $3 -A $4 -x $5 -X $6 $1 $7
 #addrIP=$1 @IP
 #user=$2
