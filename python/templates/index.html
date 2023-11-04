@@ -66,6 +66,25 @@
     <button type="submit">Afficher les informations</button>
 </form>
 
+<button id="voir-logs">Voir les logs</button>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Sélectionnez le bouton "Voir les logs" par son ID
+        var voirLogsButton = document.getElementById('voir-logs');
+        
+        // Ajoutez un gestionnaire d'événement pour le clic sur le bouton
+        voirLogsButton.addEventListener('click', function () {
+            // Redirigez l'utilisateur vers une page où les logs sont affichés
+            window.location.href = '/voir_logs';
+        });
+    });
+</script>
+
+
+
+
 <br>
 	<button id="toggleButton" onclick="toggleState()">Lancer le Controlleur</button>
 <br>
