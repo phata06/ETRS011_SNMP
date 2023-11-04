@@ -9,7 +9,7 @@ import json
 from flask import Flask, render_template, request, redirect, url_for,session, jsonify
 from equipment_manager import EquipmentManager
 from werkzeug.security import check_password_hash, generate_password_hash
-import logging
+import logging, subprocess
 
 logging.basicConfig( level=logging.DEBUG, filename='app.log')
 
@@ -70,8 +70,18 @@ def add_equipment():
     port = request.form['port']
     communaute = request.form['communaute']
 
+    #----------execution du code pour vérification--------------------------
+    commande = './multi_SNMP_v2c.sh ' + communaute + ' ' + adresse_ip
+    process = subprocess.Popen(commande, shell=True, stdout=subprocess.PIPE)
+    sortie = process.stdout.read().decode()
+
+    if sortie.strip():
+        msg_add_equipement = "équipement enregistré"
+    else:
+        msg_add_equipement = "l'équipement est introuvable"
+
     manager.add_equipment(nom, adresse_ip, port, communaute)
-    return redirect(url_for('index'))
+    return redirect(url_for('index'), msgAddEquipement=msg_add_equipement)
 
 @app.route('/remove_equipment', methods=['POST'])
 def remove_equipment():
