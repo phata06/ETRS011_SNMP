@@ -50,12 +50,12 @@ def load_users_data():
 
 @app.route('/')
 def index():
-    msgAddEquipement = request.args.get('msgAddEquipement', '')
+    msg_add_equipement = session.pop('msgAddEquipement', '')  # Récupérez le message de la session
 
     if not session.get('logged_in'):
         return redirect(url_for('login'))
     equipment_list = manager.get_equipment_list()
-    return render_template('index.html', equipment_list=equipment_list, msgAddEquipement=msgAddEquipement)
+    return render_template('index.html', equipment_list=equipment_list, msgAddEquipement=msg_add_equipement)
 
 @app.route('/toggle', methods=['POST'])
 def toggle():
@@ -85,8 +85,9 @@ def add_equipment():
     else:
         msg_add_equipement = "Le Controlleur est désactivé"
 
+    session['msgAddEquipement'] = msg_add_equipement  # Enregistrez le message dans la session
     manager.add_equipment(nom, adresse_ip, port, communaute)
-    return redirect(url_for('index'), msgAddEquipement=msg_add_equipement)
+    return redirect(url_for('index'))
 
 @app.route('/remove_equipment', methods=['POST'])
 def remove_equipment():
