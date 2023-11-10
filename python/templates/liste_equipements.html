@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- ... autres balises d'en-tête ... -->
+</head>
+<body>
+    <h1>Liste des équipements</h1>
+    
+    <!-- Afficher la liste des équipements -->
+    <ul>
+        {% for equipment in equipment_list %}
+            <li>
+                {{ equipment.Nom }} ({{ equipment.AdresseIP }})
+                <form action="/remove_equipment" method="post" style="display: inline;">
+                    <input type="hidden" name="nom" value="{{ equipment.Nom }}">
+                    <input type="hidden" name="adresse_ip" value="{{ equipment.AdresseIP }}">
+                    <button type="submit">Supprimer</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+    
+    <!-- ... autres éléments de la page ... -->
+</body>
+</html>
+

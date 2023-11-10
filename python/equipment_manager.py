@@ -43,6 +43,14 @@ class EquipmentManager:
 
     def get_equipment_list(self):
         return self.equipment_list
+    
+    def update_equipment(self, nom, adresse_ip, new_port, new_community):
+        for equipement in self.equipment_list:
+            if equipement['Nom'] == nom and equipement['AdresseIP'] == adresse_ip:
+                equipement['port'] = new_port
+                equipement['community'] = new_community
+                self.save_equipment_list()
+                return
 
 # Utilisation de la classe EquipmentManager
 if __name__ == '__main__':

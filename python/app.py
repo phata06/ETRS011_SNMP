@@ -33,7 +33,7 @@ logging.basicConfig(filename='app.log', level=logging.INFO, format='%(asctime)s 
 
 
 app = Flask(__name__)
-manager = EquipmentManager('equipement.js')
+manager = EquipmentManager('equip.js')
 users_data = {}
 # Configurez le système de journalisation
 
@@ -94,7 +94,20 @@ def remove_equipment():
     nom = request.form['nom']
     adresse_ip = request.form['adresse_ip']
     manager.remove_equipment(nom, adresse_ip)
+    return redirect(url_for('liste_equipements'))
+##     code pour modifier un equipement 
+@app.route('/edit_equipment', methods=['POST'])
+def edit_equipment():
+    nom = request.form['nom']
+    adresse_ip = request.form['adresse_ip']
+    new_port = request.form['new_port']  # Le nouveau port que vous souhaitez attribuer à l'équipement
+    new_communaute = request.form['new_communaute']  # La nouvelle communauté que vous souhaitez attribuer à l'équipement
+
+    # Effectuez les modifications nécessaires dans la gestion de votre équipement, par exemple, en utilisant votre `manager`.
+
+    # Une fois les modifications effectuées, vous pouvez rediriger l'utilisateur vers la page d'accueil ou une autre page appropriée.
     return redirect(url_for('index'))
+
 
 #----------------------- Partie 2 ------------------
 
@@ -125,6 +138,9 @@ def login():
         return render_template('auth.html', msgAlert=msg_alert)
 
     return render_template('auth.html')
+
+
+
 
 
 
@@ -188,6 +204,13 @@ def voir_logs():
         logs = log_file.read()
 
     return render_template('logs.html', logs=logs)
+############ affichage de la liste des equipemnts
+@app.route('/liste_equipements')
+def liste_equipements():
+    # Chargez la liste des équipements depuis le fichier de stockage
+    equipment_list = manager.get_equipment_list()
+
+    return render_template('liste_equipements.html', equipment_list=equipment_list)
 
 
 logging.info("Ceci est un message de journalisation d'information.")
