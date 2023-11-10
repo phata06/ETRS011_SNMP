@@ -3,6 +3,8 @@
 <head>
     <title>Liste des équipements</title>
 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
     <style>
     #toggleButton {
       background-color: #e7e7e7; /* Gray */
@@ -16,28 +18,7 @@
       border-radius: 8px;
     }
 
-    .alert {
-        color: #ff0000;
-    }
-
-
-       /* Style de la barre de navigation */
-.navbar {
-    background-color: #333; /* Couleur de fond de la barre */
-    overflow: hidden;
-}
-
-/* Style des liens dans la barre de navigation */
-.navbar a {
-    float: left; /* Alignement des liens à gauche */
-    display: block; /* Affichage en bloc pour occuper toute la largeur */
-    color: white; /* Couleur du texte */
-    text-align: center; /* Alignement du texte au centre */
-    padding: 14px 16px; /* Espacement autour du texte */
-    text-decoration: none; /* Suppression du soulignement des liens */
-}
-
-/* Style des boutons */
+    /* Style des boutons */
 #voir-logs {
     background-color: #008CBA; /* Couleur de fond du bouton */
     color: white; /* Couleur du texte du bouton */
@@ -47,21 +28,6 @@
     float: left; /* Alignement du bouton à gauche */
 }
 
-/* Style du bouton de déconnexion */
-.logout-button {
-    float: right; /* Alignement du bouton de déconnexion à droite */
-}
-
-/* Style du bouton de déconnexion au survol */
-.logout-button:hover {
-    background-color: #d9534f; /* Changement de couleur au survol */
-}
-.navbar a.home-button {
-    /* Styles spécifiques au bouton "Accueil" */
-    background-color: #4CAF50; /* Couleur de fond du bouton "Accueil" */
-    color: white; /* Couleur du texte du bouton "Accueil" */
-    /* Autres styles de mise en forme */
-}
     </style>
 </head>
 <body>
@@ -74,6 +40,8 @@
             <a href="{{ url_for('logout') }}" class="logout-button">Déconnexion</a>
         {% endif %}
     </div>
+
+    {% include 'navbar.html' %}
 
     <h2>Ajouter un équipement</h2>
     <form action="/add_equipment" method="post">
@@ -130,15 +98,24 @@
 
       function toggleState() {
           var button = document.getElementById("toggleButton");
+          var nav = document.getElementsByClassName("toggleButton");
 
           if (isControllerRunning) {
             button.style.backgroundColor = "#4CAF50"; /* Green */
             button.innerHTML = "Play Controlleur";
+            for (let i = 0; i < nav.length; i++) {
+                nav[i].style.backgroundColor = "#4CAF50"; /* Green */
+                nav[i].innerHTML = "Play Controlleur";
+            }
             isControllerRunning = false;
             sendToggleRequest(false);
           } else {
             button.style.backgroundColor = "#f44336"; /* Red */
             button.innerHTML = "Stop Controlleur";
+            for (let i = 0; i < nav.length; i++) {
+                nav[i].style.backgroundColor = "#f44336"; /* Red */
+                nav[i].innerHTML = "Stop Controlleur";
+            }
             isControllerRunning = true;
             sendToggleRequest(true);
           }

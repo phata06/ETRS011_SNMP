@@ -1,8 +1,10 @@
 <div class="navbar">
     <a href="{{ url_for('index') }}" class="home-button">Accueil</a>
     <a href="{{ url_for('liste_equipements') }}">Liste des équipements</a>
-    <button id="voir-logs">Voir les logs</button>
+    <a href="{{ url_for('voir_logs') }}" class="voir-logs">logs</a>
+
     {% if session.logged_in %}
         <a href="{{ url_for('logout') }}" class="logout-button">Déconnexion</a>
     {% endif %}
+    <a href="#" class="toggleButton" onclick="toggleState()">Lancer le Controlleur</a>
 </div>

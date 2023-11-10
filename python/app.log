@@ -254,3 +254,645 @@ INFO:Journal_exemple:Message info
 WARNING:Journal_exemple:avertissement
 2023-11-10 18:28:19,327 - Journal_exemple - CRITICAL - erreur grave
 CRITICAL:Journal_exemple:erreur grave
+2023-11-10 18:34:32,291 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 18:34:32,291 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 18:34:32,292 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 18:34:32,292 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+2023-11-10 18:34:51,634 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 18:34:51,635 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 18:34:51,636 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 18:34:51,636 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+INFO:root:L'utilisateur root s'est connecté avec succès.
+ERROR:app:Exception on /voir_logs [GET]
+Traceback (most recent call last):
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/e/P/Semestre 9/ETRS011 - Projet Developpement/ETRS011_SNMP/python/app.py", line 204, in voir_logs
+    logs = log_file.read()
+  File "/usr/lib/python3.10/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 1093: invalid continuation byte
+ERROR:app:Exception on /voir_logs [GET]
+Traceback (most recent call last):
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/e/P/Semestre 9/ETRS011 - Projet Developpement/ETRS011_SNMP/python/app.py", line 204, in voir_logs
+    logs = log_file.read()
+  File "/usr/lib/python3.10/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 1093: invalid continuation byte
+2023-11-10 18:43:08,259 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 18:43:08,260 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 18:43:08,260 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 18:43:08,261 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+ERROR:app:Exception on /voir_logs [GET]
+Traceback (most recent call last):
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/e/P/Semestre 9/ETRS011 - Projet Developpement/ETRS011_SNMP/python/app.py", line 204, in voir_logs
+    logs = log_file.read()
+  File "/usr/lib/python3.10/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 1093: invalid continuation byte
+2023-11-10 18:45:06,314 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 18:45:06,315 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 18:45:06,315 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 18:45:06,316 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 18:45:28,887 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 18:45:28,888 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 18:45:28,888 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 18:45:28,888 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+ERROR:app:Exception on /voir_logs [GET]
+Traceback (most recent call last):
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/e/P/Semestre 9/ETRS011 - Projet Developpement/ETRS011_SNMP/python/app.py", line 204, in voir_logs
+    logs = log_file.read()
+  File "/usr/lib/python3.10/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 1093: invalid continuation byte
+2023-11-10 18:47:55,256 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 18:47:55,257 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 18:47:55,258 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 18:47:55,258 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+ERROR:app:Exception on /voir_logs [GET]
+Traceback (most recent call last):
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/e/P/Semestre 9/ETRS011 - Projet Developpement/ETRS011_SNMP/python/app.py", line 205, in voir_logs
+    logs = log_file.read()
+  File "/usr/lib/python3.10/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 1093: invalid continuation byte
+ERROR:app:Exception on /voir_logs [GET]
+Traceback (most recent call last):
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/e/P/Semestre 9/ETRS011 - Projet Developpement/ETRS011_SNMP/python/app.py", line 205, in voir_logs
+    logs = log_file.read()
+  File "/usr/lib/python3.10/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 1093: invalid continuation byte
+ERROR:app:Exception on /voir_logs [GET]
+Traceback (most recent call last):
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/e/P/Semestre 9/ETRS011 - Projet Developpement/ETRS011_SNMP/python/app.py", line 205, in voir_logs
+    logs = log_file.read()
+  File "/usr/lib/python3.10/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 1093: invalid continuation byte
+INFO:root:L'utilisateur root s'est connecté avec succès.
+2023-11-10 18:52:46,187 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 18:52:46,188 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 18:52:46,188 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 18:52:46,189 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 18:56:04,359 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 18:56:04,359 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 18:56:04,360 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 18:56:04,360 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 18:57:42,303 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 18:57:42,304 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 18:57:42,304 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 18:57:42,305 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 18:58:37,915 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 18:58:37,915 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 18:58:37,916 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 18:58:37,916 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 18:59:34,334 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 18:59:34,335 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 18:59:34,335 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 18:59:34,336 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 18:59:58,652 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 18:59:58,653 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 18:59:58,653 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 18:59:58,654 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+INFO:root:L'utilisateur root s'est connecté avec succès.
+2023-11-10 19:01:39,255 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:01:39,256 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:01:39,256 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:01:39,257 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+ERROR:app:Exception on /voir_logs [GET]
+Traceback (most recent call last):
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/e/P/Semestre 9/ETRS011 - Projet Developpement/ETRS011_SNMP/python/app.py", line 205, in voir_logs
+    logs = log_file.read()
+  File "/usr/lib/python3.10/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 1093: invalid continuation byte
+2023-11-10 19:05:43,973 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:05:43,974 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:05:43,974 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:05:43,975 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:09:50,960 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:09:50,960 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:09:50,961 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:09:50,961 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:12:13,507 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:12:13,508 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:12:13,508 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:12:13,509 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:14:00,926 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:14:00,927 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:14:00,927 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:14:00,928 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:15:09,536 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:15:09,537 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:15:09,537 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:15:09,538 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:15:40,268 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:15:40,269 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:15:40,270 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:15:40,270 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:19:47,539 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:19:47,540 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:19:47,541 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:19:47,541 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:20:26,244 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:20:26,245 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:20:26,245 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:20:26,246 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:23:42,937 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:23:42,938 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:23:42,938 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:23:42,939 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:25:12,130 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:25:12,131 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:25:12,132 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:25:12,132 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:25:35,995 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:25:35,996 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:25:35,996 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:25:35,997 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:28:23,074 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:28:23,075 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:28:23,075 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:28:23,075 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:29:06,244 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:29:06,245 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:29:06,245 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:29:06,245 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:29:33,341 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:29:33,342 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:29:33,342 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:29:33,343 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:29:48,107 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:29:48,108 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:29:48,108 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:29:48,109 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:30:06,392 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:30:06,393 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:30:06,394 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:30:06,394 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:30:36,241 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:30:36,242 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:30:36,242 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:30:36,243 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:31:13,369 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:31:13,370 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:31:13,371 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:31:13,371 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:33:31,065 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:33:31,065 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:33:31,066 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:33:31,066 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:33:48,655 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:33:48,655 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:33:48,656 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:33:48,657 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:34:39,382 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:34:39,383 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:34:39,384 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:34:39,384 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:34:53,990 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:34:53,991 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:34:53,991 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:34:53,992 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 19:35:19,773 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 19:35:19,774 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 19:35:19,775 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 19:35:19,775 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 20:17:16,933 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 20:17:16,934 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 20:17:16,934 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 20:17:16,935 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+ERROR:app:Exception on /voir_logs [GET]
+Traceback (most recent call last):
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/e/P/Semestre 9/ETRS011 - Projet Developpement/ETRS011_SNMP/python/app.py", line 205, in voir_logs
+    logs = log_file.read()
+  File "/usr/lib/python3.10/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 1093: invalid continuation byte
+2023-11-10 20:39:11,320 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 20:39:11,320 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 20:39:11,321 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 20:39:11,321 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+ERROR:app:Exception on /voir_logs [GET]
+Traceback (most recent call last):
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/e/P/Semestre 9/ETRS011 - Projet Developpement/ETRS011_SNMP/python/app.py", line 205, in voir_logs
+    logs = log_file.read()
+  File "/usr/lib/python3.10/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 1093: invalid continuation byte
+2023-11-10 20:41:49,928 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 20:41:49,929 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 20:41:49,929 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 20:41:49,930 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 20:42:35,188 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 20:42:35,189 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 20:42:35,189 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 20:42:35,190 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+ERROR:app:Exception on /voir_logs [GET]
+Traceback (most recent call last):
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/e/P/Semestre 9/ETRS011 - Projet Developpement/ETRS011_SNMP/python/app.py", line 205, in voir_logs
+    logs = log_file.read()
+  File "/usr/lib/python3.10/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 1093: invalid continuation byte
+2023-11-10 20:43:18,411 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 20:43:18,412 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 20:43:18,412 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 20:43:18,413 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+ERROR:app:Exception on /voir_logs [GET]
+Traceback (most recent call last):
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/e/P/Semestre 9/ETRS011 - Projet Developpement/ETRS011_SNMP/python/app.py", line 205, in voir_logs
+    logs = log_file.read()
+  File "/usr/lib/python3.10/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 1093: invalid continuation byte
+2023-11-10 20:44:37,350 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 20:44:37,350 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 20:44:37,351 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 20:44:37,352 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+ERROR:app:Exception on /voir_logs [GET]
+Traceback (most recent call last):
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/e/P/Semestre 9/ETRS011 - Projet Developpement/ETRS011_SNMP/python/app.py", line 205, in voir_logs
+    logs = log_file.read()
+  File "/usr/lib/python3.10/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 1093: invalid continuation byte
+2023-11-10 20:45:30,812 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 20:45:30,812 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 20:45:30,813 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 20:45:30,813 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://127.0.0.1:9000
+ERROR:app:Exception on /voir_logs [GET]
+Traceback (most recent call last):
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nico/.local/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/mnt/e/P/Semestre 9/ETRS011 - Projet Developpement/ETRS011_SNMP/python/app.py", line 205, in voir_logs
+    logs = log_file.read()
+  File "/usr/lib/python3.10/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 1093: invalid continuation byte

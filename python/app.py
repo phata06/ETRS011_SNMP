@@ -200,10 +200,12 @@ def signup():
 
 @app.route('/voir_logs')
 def voir_logs():
+    print("je suis dans logs")
     with open('app.log', 'r') as log_file:
         logs = log_file.read()
 
     return render_template('logs.html', logs=logs)
+
 ############ affichage de la liste des equipemnts
 @app.route('/liste_equipements')
 def liste_equipements():
@@ -212,6 +214,10 @@ def liste_equipements():
 
     return render_template('liste_equipements.html', equipment_list=equipment_list)
 
+############ affichage de la page erreur 500
+@app.errorhandler(500)
+def internal_server_error(error):
+    return render_template('error.html'), 500
 
 logging.info("Ceci est un message de journalisation d'information.")
 

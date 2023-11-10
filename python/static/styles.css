@@ -1,49 +1,51 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    text-align: center;
 }
 
-.container {
-    margin: 100px auto;
-    width: 300px;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* Style de la barre de navigation */
+.navbar {
+    background-color: #333; /* Couleur de fond de la barre */
+    overflow: hidden;
 }
 
-h1 {
-    font-size: 24px;
+/* Style des liens dans la barre de navigation */
+.navbar a {
+    float: left; /* Alignement des liens à gauche */
+    display: block; /* Affichage en bloc pour occuper toute la largeur */
+    color: white; /* Couleur du texte */
+    text-align: center; /* Alignement du texte au centre */
+    padding: 14px 16px; /* Espacement autour du texte */
+    text-decoration: none; /* Suppression du soulignement des liens */
 }
 
-label {
-    display: block;
-    font-weight: bold;
-    margin-top: 10px;
+.navbar a:hover {
+    background-color: #757575;
+    color: #222222;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"] {
-    width: 20%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+.navbar a.voir-logs {
+    background-color: #008CBA; /* Couleur de fond du bouton */
 }
 
-button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+.navbar a.toggleButton {
+    background-color: #e7e7e7; /* Gray */
+    float: right; /* Alignement du bouton de déconnexion à droite */
+    color: #333333;
 }
 
-button:hover {
-    background-color: #0056b3;
+/* Style du bouton de déconnexion */
+.navbar a.logout-button {
+    float: right; /* Alignement du bouton de déconnexion à droite */
+}
+
+/* Style du bouton de déconnexion au survol */
+.navbar a.logout-button {
+    background-color: #d9534f; /* Changement de couleur au survol */
+}
+.navbar a.home-button {
+    /* Styles spécifiques au bouton "Accueil" */
+    background-color: #4CAF50; /* Couleur de fond du bouton "Accueil" */
+    /* Autres styles de mise en forme */
 }
 
 .alert {

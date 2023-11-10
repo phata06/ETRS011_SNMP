@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- ... autres balises d'en-tête ... -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            text-align: center;
+        }
+        span {
+            font-size: 200px;
+        }
+    </style>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    
+    <span>
+        error 500
+    </span>
+    
+    <!-- ... autres éléments de la page ... -->
+</body>
+</html>
