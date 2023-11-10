@@ -19,9 +19,61 @@
     .alert {
         color: #ff0000;
     }
+
+
+       /* Style de la barre de navigation */
+.navbar {
+    background-color: #333; /* Couleur de fond de la barre */
+    overflow: hidden;
+}
+
+/* Style des liens dans la barre de navigation */
+.navbar a {
+    float: left; /* Alignement des liens à gauche */
+    display: block; /* Affichage en bloc pour occuper toute la largeur */
+    color: white; /* Couleur du texte */
+    text-align: center; /* Alignement du texte au centre */
+    padding: 14px 16px; /* Espacement autour du texte */
+    text-decoration: none; /* Suppression du soulignement des liens */
+}
+
+/* Style des boutons */
+#voir-logs {
+    background-color: #008CBA; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
+    border: none; /* Suppression de la bordure */
+    padding: 14px 16px; /* Espacement autour du bouton */
+    cursor: pointer; /* Curseur de la souris en forme de main */
+    float: left; /* Alignement du bouton à gauche */
+}
+
+/* Style du bouton de déconnexion */
+.logout-button {
+    float: right; /* Alignement du bouton de déconnexion à droite */
+}
+
+/* Style du bouton de déconnexion au survol */
+.logout-button:hover {
+    background-color: #d9534f; /* Changement de couleur au survol */
+}
+.navbar a.home-button {
+    /* Styles spécifiques au bouton "Accueil" */
+    background-color: #4CAF50; /* Couleur de fond du bouton "Accueil" */
+    color: white; /* Couleur du texte du bouton "Accueil" */
+    /* Autres styles de mise en forme */
+}
     </style>
 </head>
 <body>
+
+    <div class="navbar">
+        <a href="{{ url_for('index') }}" class="home-button">Accueil</a>
+        <a href="{{ url_for('liste_equipements') }}">Liste des équipements</a>
+        <button id="voir-logs">Voir les logs</button>
+        {% if session.logged_in %}
+            <a href="{{ url_for('logout') }}" class="logout-button">Déconnexion</a>
+        {% endif %}
+    </div>
     <!-- <h1>Liste des équipements</h1>
 
     <!- Afficher la liste des équipements -->
@@ -65,7 +117,7 @@
     {% endif %}
 
 
-    <a href="{{ url_for('liste_equipements') }}">Voir la liste des équipements</a>
+    <!-- <a href="{{ url_for('liste_equipements') }}">Voir la liste des équipements</a> -->
 
 
     <!-- <h2>Modifier un équipement</h2>
@@ -118,7 +170,7 @@
 
 
 
-	<h2>Sélectionnez un équipement</h2>
+	<!-- <h2>Sélectionnez un équipement</h2>
 <form action="/get_equipment_info" method="post">
     <label for="selected_equipment">Équipement:</label>
     <select name="selected_equipment" required>
@@ -126,10 +178,10 @@
             <option value="{{ equipment.AdresseIP }}">{{ equipment.Nom }} ({{ equipment.AdresseIP }})</option>
         {% endfor %}
     </select>
-    <button type="submit">Afficher les informations</button>
-</form>
+    <button type="submit">Afficher les informations</button> 
+</form> -->
 
-<button id="voir-logs">Voir les logs</button>
+<!-- <button id="voir-logs">Voir les logs</button> -->
 
 
 <script>
@@ -151,12 +203,12 @@
 <br>
 	<button id="toggleButton" onclick="toggleState()">Lancer le Controlleur</button>
 <br>
-
+<!-- 
 {% if session.logged_in %}
     <a href="{{ url_for('logout') }}">Déconnexion</a>
 {% endif %}
 
-<br>
+<br> -->
 
 {{ session.logged_in }}
 
