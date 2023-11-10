@@ -19,6 +19,9 @@ class EquipmentManager:
                 return equipment_info.get('equipements', [])
         except FileNotFoundError:
             return []
+        except json.decoder.JSONDecodeError as e:
+            print(f"Error loading equipment list: {e}")
+            return []
 
     def save_equipment_list(self):
         equipment_info = {'equipements': self.equipment_list}
