@@ -58,9 +58,11 @@
         <button type="submit">Ajouter</button>
     </form>
 
+    {% if msgAddEquipement %}
     <div class="alert">
         {{ msgAddEquipement }}
     </div>
+    {% endif %}
 
 
 	<h2>Sélectionnez un équipement</h2>
@@ -81,7 +83,7 @@
     document.addEventListener('DOMContentLoaded', function () {
         // Sélectionnez le bouton "Voir les logs" par son ID
         var voirLogsButton = document.getElementById('voir-logs');
-        
+
         // Ajoutez un gestionnaire d'événement pour le clic sur le bouton
         voirLogsButton.addEventListener('click', function () {
             // Redirigez l'utilisateur vers une page où les logs sont affichés

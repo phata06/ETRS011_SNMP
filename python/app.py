@@ -50,10 +50,12 @@ def load_users_data():
 
 @app.route('/')
 def index():
+    msgAddEquipement = request.args.get('msgAddEquipement', '')
+
     if not session.get('logged_in'):
         return redirect(url_for('login'))
     equipment_list = manager.get_equipment_list()
-    return render_template('index.html', equipment_list=equipment_list)
+    return render_template('index.html', equipment_list=equipment_list, msgAddEquipement=msgAddEquipement)
 
 @app.route('/toggle', methods=['POST'])
 def toggle():
@@ -71,14 +73,17 @@ def add_equipment():
     communaute = request.form['communaute']
 
     #----------execution du code pour vérification--------------------------
-    commande = './multi_SNMP_v2c.sh ' + communaute + ' ' + adresse_ip
-    process = subprocess.Popen(commande, shell=True, stdout=subprocess.PIPE)
-    sortie = process.stdout.read().decode()
+    if etat_SNMP==True:
+        commande = './multi_SNMP_v2c.sh ' + communaute + ' ' + adresse_ip
+        process = subprocess.Popen(commande, shell=True, stdout=subprocess.PIPE)
+        sortie = process.stdout.read().decode()
 
-    if sortie.strip():
-        msg_add_equipement = "équipement enregistré"
+        if sortie.strip():
+            msg_add_equipement = "équipement enregistré"
+        else:
+            msg_add_equipement = "l'équipement est introuvable"
     else:
-        msg_add_equipement = "l'équipement est introuvable"
+        msg_add_equipement = "Le Controlleur est désactivé"
 
     manager.add_equipment(nom, adresse_ip, port, communaute)
     return redirect(url_for('index'), msgAddEquipement=msg_add_equipement)
@@ -180,7 +185,7 @@ def signup():
 def voir_logs():
     with open('app.log', 'r') as log_file:
         logs = log_file.read()
-    
+
     return render_template('logs.html', logs=logs)
 
 
