@@ -74,21 +74,6 @@
             <a href="{{ url_for('logout') }}" class="logout-button">Déconnexion</a>
         {% endif %}
     </div>
-    <!-- <h1>Liste des équipements</h1>
-
-    <!- Afficher la liste des équipements -->
-    <!-- <ul>
-        {% for equipment in equipment_list %}
-            <li>
-                {{ equipment.Nom }} ({{ equipment.AdresseIP }})
-                <form action="/remove_equipment" method="post" style="display: inline;">
-                    <input type="hidden" name="nom" value="{{ equipment.Nom }}">
-                    <input type="hidden" name="adresse_ip" value="{{ equipment.AdresseIP }}">
-                    <button type="submit">Supprimer</button>
-                </form>
-            </li>
-        {% endfor %}
-    </ul>  -->
 
     <h2>Ajouter un équipement</h2>
     <form action="/add_equipment" method="post">
@@ -116,74 +101,6 @@
     </div>
     {% endif %}
 
-
-    <!-- <a href="{{ url_for('liste_equipements') }}">Voir la liste des équipements</a> -->
-
-
-    <!-- <h2>Modifier un équipement</h2>
-    <form action="/edit_equipment" method="post">
-        <label for="nom">Nom:</label>
-        <input type="text" name="nom" required><br>
-    
-        <label for="adresse_ip">Adresse IP:</label>
-        <input type="text" name="adresse_ip" required pattern="^(\d{1,3}\.){3}\d{1,3}$">
-    
-        <label for="new_port">Nouveau Port:</label>
-        <input type="text" name="new_port" required><br>
-    
-        <label for="new_communaute">Nouvelle Communauté:</label>
-        <input type="text" name="new_communaute" required><br>
-    
-        <button type="submit">Modifier</button>
-    </form>
-    
- -->
-
-<!--        code pour faire des modification -->
- <!-- <ul>
-    {% for equipment in equipment_list %}
-        <li>
-            {{ equipment.Nom }} ({{ equipment.AdresseIP }})
-            <form action="/edit_equipment" method="post" style="display: inline;">
-                <input type="hidden" name="nom" value="{{ equipment.Nom }}">
-                <input type="hidden" name="adresse_ip" value="{{ equipment.AdresseIP }}">
-                <button type="button" onclick="editEquipment('{{ equipment.Nom }}', '{{ equipment.AdresseIP }}')">Modifier</button>
-            </form>
-        </li>
-        <div id="{{ equipment.Nom }}_edit_form" style="display: none;">
-            <form action="/edit_equipment" method="post">
-                <label for="new_port">Nouveau Port:</label>
-                <input type="text" name="new_port" required><br>
-
-                <label for="new_communaute">Nouvelle Communauté:</label>
-                <input type="text" name="new_communaute" required><br>
-
-                <input type="hidden" name="nom" value="{{ equipment.Nom }}">
-                <input type="hidden" name="adresse_ip" value="{{ equipment.AdresseIP }}">
-                <button type="submit">Enregistrer</button>
-            </form>
-        </div>
-    {% endfor %}
-</ul> -->
-
-
-
-
-
-	<!-- <h2>Sélectionnez un équipement</h2>
-<form action="/get_equipment_info" method="post">
-    <label for="selected_equipment">Équipement:</label>
-    <select name="selected_equipment" required>
-        {% for equipment in equipment_list %}
-            <option value="{{ equipment.AdresseIP }}">{{ equipment.Nom }} ({{ equipment.AdresseIP }})</option>
-        {% endfor %}
-    </select>
-    <button type="submit">Afficher les informations</button> 
-</form> -->
-
-<!-- <button id="voir-logs">Voir les logs</button> -->
-
-
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         // Sélectionnez le bouton "Voir les logs" par son ID
@@ -203,12 +120,6 @@
 <br>
 	<button id="toggleButton" onclick="toggleState()">Lancer le Controlleur</button>
 <br>
-<!-- 
-{% if session.logged_in %}
-    <a href="{{ url_for('logout') }}">Déconnexion</a>
-{% endif %}
-
-<br> -->
 
 {{ session.logged_in }}
 
@@ -240,21 +151,6 @@
           xhr.send(JSON.stringify({"newState": newState}));
       }
   </script>
-
-
-
-<!-- <script>
-    function editEquipment(nom, adresseIP) {
-        var formId = nom + '_edit_form';
-        var form = document.getElementById(formId);
-
-        if (form.style.display === "none") {
-            form.style.display = "block";
-        } else {
-            form.style.display = "none";
-        }
-    }
-</script> -->
 
 </body>
 </html>
