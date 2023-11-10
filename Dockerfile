@@ -1,6 +1,9 @@
 # Utilisez une image de base avec Python
 FROM python:3.8
 
+# Installer le service SNMP
+RUN apt-get update && apt-get install -y snmp
+
 # Définissez le répertoire de travail dans le conteneur
 WORKDIR /app
 
