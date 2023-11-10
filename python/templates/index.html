@@ -23,47 +23,49 @@
 
     {% include 'navbar.html' %}
 
-    <h2>Ajouter un équipement</h2>
-    <form action="/add_equipment" method="post">
-        <label for="nom">Nom:</label>
-        <input type="text" name="nom" required><br>
+    <div class="main">
+        <h2>Ajouter un équipement</h2>
+        <form action="/add_equipment" method="post">
+            <label for="nom">Nom:</label>
+            <input type="text" name="nom" required><br>
 
-        <label for="adresse_ip">Adresse IP:</label>
-		<input type="text" name="adresse_ip" required pattern="^(\d{1,3}\.){3}\d{1,3}$">
+            <label for="adresse_ip">Adresse IP:</label>
+            <input type="text" name="adresse_ip" required pattern="^(\d{1,3}\.){3}\d{1,3}$">
 
-        <label for="port">Port:</label>
-        <input type="text" name="port" required><br>
+            <label for="port">Port:</label>
+            <input type="text" name="port" required><br>
 
-        <label for="communaute">Communauté:</label>
-        <input type="text" name="communaute" required><br>
+            <label for="communaute">Communauté:</label>
+            <input type="text" name="communaute" required><br>
 
-		<label for="oids">OIDs (séparés par des virgules):</label>
-		<input type="text" name="oid" pattern="^(\d+(\.\d+)*)?$"><br>
+            <label for="oids">OIDs (séparés par des virgules):</label>
+            <input type="text" name="oid" pattern="^(\d+(\.\d+)*)?$"><br>
 
-        <button type="submit">Ajouter</button>
-    </form>
+            <button type="submit">Ajouter</button>
+        </form>
 
-    {% if msgAddEquipement %}
-    <div class="alert">
-        {{ msgAddEquipement }}
+        {% if msgAddEquipement %}
+        <div class="alert">
+            {{ msgAddEquipement }}
+        </div>
+        {% endif %}
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Sélectionnez le bouton "Voir les logs" par son ID
+                var voirLogsButton = document.getElementById('voir-logs');
+
+                // Ajoutez un gestionnaire d'événement pour le clic sur le bouton
+                voirLogsButton.addEventListener('click', function () {
+                    // Redirigez l'utilisateur vers une page où les logs sont affichés
+                    window.location.href = '/voir_logs';
+                });
+            });
+        </script>
+
+
+        {{ session.logged_in }}
     </div>
-    {% endif %}
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Sélectionnez le bouton "Voir les logs" par son ID
-        var voirLogsButton = document.getElementById('voir-logs');
-
-        // Ajoutez un gestionnaire d'événement pour le clic sur le bouton
-        voirLogsButton.addEventListener('click', function () {
-            // Redirigez l'utilisateur vers une page où les logs sont affichés
-            window.location.href = '/voir_logs';
-        });
-    });
-</script>
-
-
-{{ session.logged_in }}
 
 {% include 'footer.html' %}
 

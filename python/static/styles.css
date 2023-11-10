@@ -1,5 +1,11 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar, .main, .footer {
+    margin: 10px;
 }
 
 /* Style de la barre de navigation */
@@ -48,12 +54,16 @@ body {
     /* Autres styles de mise en forme */
 }
 
+.main {
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
 .alert {
     color: #ff0000;
 }
 
 .footer {
-    margin: 20px;
     background-color: #333;
     color: white;
     text-align: center;

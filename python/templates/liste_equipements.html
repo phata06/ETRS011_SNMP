@@ -8,34 +8,35 @@
 </head>
 <body>
     {% include 'navbar.html' %}
-    <h1>Liste des équipements</h1>
+
+    <div class="main">
+        <h1>Liste des équipements</h1>
     
-    <!-- Afficher la liste des équipements -->
-    <ul>
-        {% for equipment in equipment_list %}
-            <li>
-                {{ equipment.Nom }} ({{ equipment.AdresseIP }})
-                <form action="/remove_equipment" method="post" style="display: inline;">
-                    <input type="hidden" name="nom" value="{{ equipment.Nom }}">
-                    <input type="hidden" name="adresse_ip" value="{{ equipment.AdresseIP }}">
-                    <button type="submit">Supprimer</button>
-                </form>
-            </li>
-        {% endfor %}
-    </ul>
+        <!-- Afficher la liste des équipements -->
+        <ul>
+            {% for equipment in equipment_list %}
+                <li>
+                    {{ equipment.Nom }} ({{ equipment.AdresseIP }})
+                    <form action="/remove_equipment" method="post" style="display: inline;">
+                        <input type="hidden" name="nom" value="{{ equipment.Nom }}">
+                        <input type="hidden" name="adresse_ip" value="{{ equipment.AdresseIP }}">
+                        <button type="submit">Supprimer</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
 
-
-
-    <h2>Sélectionnez un équipement</h2>
-<form action="/get_equipment_info" method="post">
-    <label for="selected_equipment">Équipement:</label>
-    <select name="selected_equipment" required>
-        {% for equipment in equipment_list %}
-            <option value="{{ equipment.AdresseIP }}">{{ equipment.Nom }} ({{ equipment.AdresseIP }})</option>
-        {% endfor %}
-    </select>
-    <button type="submit">Afficher les informations</button>
-</form>
+        <h2>Sélectionnez un équipement</h2>
+        <form action="/get_equipment_info" method="post">
+            <label for="selected_equipment">Équipement:</label>
+            <select name="selected_equipment" required>
+                {% for equipment in equipment_list %}
+                    <option value="{{ equipment.AdresseIP }}">{{ equipment.Nom }} ({{ equipment.AdresseIP }})</option>
+                {% endfor %}
+            </select>
+            <button type="submit">Afficher les informations</button>
+        </form>
+    </div>
     
     <!-- ... autres éléments de la page ... -->
     {% include 'footer.html' %}
