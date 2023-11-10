@@ -200,7 +200,7 @@ def signup():
 
 @app.route('/voir_logs')
 def voir_logs():
-    with open('app.log', 'r') as log_file:
+    with open('app.log', 'r', encoding='ISO-8859-1') as log_file:
         logs = log_file.read()
 
     return render_template('logs.html', logs=logs)

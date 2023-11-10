@@ -1162,3 +1162,14 @@ WARNING:Journal_exemple:avertissement
 CRITICAL:Journal_exemple:erreur grave
 INFO:root:Ceci est un message de journalisation d'information.
 INFO:waitress:Serving on http://127.0.0.1:9000
+2023-11-10 22:35:35,548 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-10 22:35:35,549 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-10 22:35:35,549 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-10 22:35:35,549 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://0.0.0.0:9000
+INFO:root:L'utilisateur root s'est connecté avec succès.
