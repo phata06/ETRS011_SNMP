@@ -1,6 +1,16 @@
+<a href="/">retour</a>
+<br>
 <h2>Informations de l'équipement</h2>
 <p>Nom: {{ equipment.Nom }}</p>
 <p>Adresse IP: {{ equipment.AdresseIP }}</p>
 <p>Port: {{ equipment.port }}</p>
+{% if equipment.SNMP == 'v3' %}
+<p>Nom d'utilisateur: {{ equipment.Username }}<p>
+<p>Protocole d'authentification: {{ equipment.AuthProtocol }}<p>
+<p>Mot de passe d'authentification: {{ equipment.AuthPassword }}<p>
+<p>Protocole de confidentialité: {{ equipment.PrivacyProtocol }}<p>
+<p>Mot de passe de confidentialité: {{ equipment.PrivacyPassword }}<p>
+{% else %}
 <p>Communauté: {{ equipment.community }}</p>
 <p>OIDs: {{ equipment.OIDs }}</p>
+{% endif %}

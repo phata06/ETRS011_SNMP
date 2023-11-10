@@ -34,6 +34,24 @@ class EquipmentManager:
         self.equipment_list.append(new_equipment)
         self.save_equipment_list()
 
+    def add_equipment_v3(self, nom, adresse_ip, username, auth_protocol):
+        for equipement in self.equipment_list:
+            if equipement['Nom'] == nom and equipement['AdresseIP'] == adresse_ip:
+                print(f"L'équipement '{nom}' avec l'adresse IP '{adresse_ip}' existe déjà.")
+                return
+        new_equipment = {
+            'Nom': nom,
+            'AdresseIP': adresse_ip, 
+            'SNMP': 'v3',
+            'Username': username,
+            'AuthProtocol': auth_protocol,
+            'AuthPassword': auth_password,
+            'PrivacyProtocol': privacy_protocol,
+            'PrivacyPassword': privacy_password
+            }
+        self.equipment_list.append(new_equipment)
+        self.save_equipment_list()
+
     def remove_equipment(self, nom, adresse_ip):
         for equipement in self.equipment_list:
             if equipement['Nom'] == nom and equipement['AdresseIP'] == adresse_ip:
@@ -47,15 +65,13 @@ class EquipmentManager:
 # Utilisation de la classe EquipmentManager
 if __name__ == '__main__':
     manager = EquipmentManager('materiel.json')
-    
+
     # Ajouter un équipement
     #manager.add_equipment('Equipement1', '192.168.1.1', 80, 'public')
-    
+
     # Supprimer un équipement
    # manager.remove_equipment('Equipement1', '192.168.1.1')
-    
+
     # Obtenir la liste des équipements
     equipment_list = manager.get_equipment_list()
     print(equipment_list)
-
-
