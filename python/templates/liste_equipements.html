@@ -2,49 +2,9 @@
 <html>
 <head>
     <!-- ... autres balises d'en-tête ... -->
-    <style>
-               /* Style de la barre de navigation */
-.navbar {
-    background-color: #333; /* Couleur de fond de la barre */
-    overflow: hidden;
-}
+    <title>Liste des équipements</title>
 
-/* Style des liens dans la barre de navigation */
-.navbar a {
-    float: left; /* Alignement des liens à gauche */
-    display: block; /* Affichage en bloc pour occuper toute la largeur */
-    color: white; /* Couleur du texte */
-    text-align: center; /* Alignement du texte au centre */
-    padding: 14px 16px; /* Espacement autour du texte */
-    text-decoration: none; /* Suppression du soulignement des liens */
-}
-
-/* Style des boutons */
-#voir-logs {
-    background-color: #008CBA; /* Couleur de fond du bouton */
-    color: white; /* Couleur du texte du bouton */
-    border: none; /* Suppression de la bordure */
-    padding: 14px 16px; /* Espacement autour du bouton */
-    cursor: pointer; /* Curseur de la souris en forme de main */
-    float: left; /* Alignement du bouton à gauche */
-}
-
-/* Style du bouton de déconnexion */
-.logout-button {
-    float: right; /* Alignement du bouton de déconnexion à droite */
-}
-
-/* Style du bouton de déconnexion au survol */
-.logout-button:hover {
-    background-color: #d9534f; /* Changement de couleur au survol */
-}
-.navbar a.home-button {
-    /* Styles spécifiques au bouton "Accueil" */
-    background-color: #4CAF50; /* Couleur de fond du bouton "Accueil" */
-    color: white; /* Couleur du texte du bouton "Accueil" */
-    /* Autres styles de mise en forme */
-}
-    </style>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     {% include 'navbar.html' %}
@@ -78,6 +38,9 @@
 </form>
     
     <!-- ... autres éléments de la page ... -->
+
+    <script src="{{ url_for('static', filename='toggle.js') }}"></script>
+
 </body>
 </html>
 

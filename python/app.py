@@ -55,7 +55,7 @@ def index():
     if not session.get('logged_in'):
         return redirect(url_for('login'))
     equipment_list = manager.get_equipment_list()
-    return render_template('index.html', equipment_list=equipment_list, msgAddEquipement=msg_add_equipement)
+    return render_template('index.html', equipment_list=equipment_list, msgAddEquipement=msg_add_equipement, etatSNMP=etat_SNMP)
 
 @app.route('/toggle', methods=['POST'])
 def toggle():
@@ -200,7 +200,6 @@ def signup():
 
 @app.route('/voir_logs')
 def voir_logs():
-    print("je suis dans logs")
     with open('app.log', 'r') as log_file:
         logs = log_file.read()
 

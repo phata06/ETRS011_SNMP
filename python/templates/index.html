@@ -1,22 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Liste des équipements</title>
+    <title>APP SNMP - ACCUEIL</title>
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 
     <style>
-    #toggleButton {
-      background-color: #e7e7e7; /* Gray */
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      border-radius: 8px;
-    }
 
     /* Style des boutons */
 #voir-logs {
@@ -31,15 +20,6 @@
     </style>
 </head>
 <body>
-
-    <div class="navbar">
-        <a href="{{ url_for('index') }}" class="home-button">Accueil</a>
-        <a href="{{ url_for('liste_equipements') }}">Liste des équipements</a>
-        <button id="voir-logs">Voir les logs</button>
-        {% if session.logged_in %}
-            <a href="{{ url_for('logout') }}" class="logout-button">Déconnexion</a>
-        {% endif %}
-    </div>
 
     {% include 'navbar.html' %}
 
@@ -83,51 +63,12 @@
 </script>
 
 
-
-
-<br>
-	<button id="toggleButton" onclick="toggleState()">Lancer le Controlleur</button>
-<br>
-
 {{ session.logged_in }}
 
 
 
-<script>
-      var isControllerRunning = false; // Nouvelle variable pour stocker l'état du bouton
+<script src="{{ url_for('static', filename='toggle.js') }}"></script>
 
-      function toggleState() {
-          var button = document.getElementById("toggleButton");
-          var nav = document.getElementsByClassName("toggleButton");
-
-          if (isControllerRunning) {
-            button.style.backgroundColor = "#4CAF50"; /* Green */
-            button.innerHTML = "Play Controlleur";
-            for (let i = 0; i < nav.length; i++) {
-                nav[i].style.backgroundColor = "#4CAF50"; /* Green */
-                nav[i].innerHTML = "Play Controlleur";
-            }
-            isControllerRunning = false;
-            sendToggleRequest(false);
-          } else {
-            button.style.backgroundColor = "#f44336"; /* Red */
-            button.innerHTML = "Stop Controlleur";
-            for (let i = 0; i < nav.length; i++) {
-                nav[i].style.backgroundColor = "#f44336"; /* Red */
-                nav[i].innerHTML = "Stop Controlleur";
-            }
-            isControllerRunning = true;
-            sendToggleRequest(true);
-          }
-      }
-
-      function sendToggleRequest(newState) {
-          var xhr = new XMLHttpRequest();
-          xhr.open("POST", "/toggle", true);
-          xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-          xhr.send(JSON.stringify({"newState": newState}));
-      }
-  </script>
 
 </body>
 </html>

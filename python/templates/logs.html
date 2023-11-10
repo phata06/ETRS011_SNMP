@@ -2,6 +2,7 @@
 <html>
 <head>
     <!-- ... autres balises d'en-tête ... -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     {% include 'navbar.html' %}
@@ -11,5 +12,8 @@
     <pre>{{ logs }}</pre>
     
     <!-- ... autres éléments de la page ... -->
+
+    <script src="{{ url_for('static', filename='toggle.js') }}"></script>
+
 </body>
 </html>
