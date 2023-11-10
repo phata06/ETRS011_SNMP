@@ -51,3 +51,11 @@ body {
 .alert {
     color: #ff0000;
 }
+
+.footer {
+    margin: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
