@@ -9,9 +9,22 @@
 
     <div class="main">
         <h1>Logs</h1>
+
+        <!-- Bouton de téléchargement -->
+        <form action="/download_logs" method="get">
+            <button type="submit">Télécharger les logs</button>
+        </form>
     
         <!-- Affichez les logs dans une balise <pre> -->
-        <pre>{{ logs }}</pre>
+        <!-- <pre>{{ logs }}</pre> -->
+        {% for log_line in logs %}
+            <pre>{{ log_line }}</pre>
+        {% endfor %}
+
+        <!-- Bouton de téléchargement -->
+        <form action="/download_logs" method="get">
+            <button type="submit">Télécharger les logs</button>
+        </form>
     </div>
     
     <!-- ... autres éléments de la page ... -->

@@ -6,7 +6,7 @@ Created on Fri Oct 13 14:12:01 2023
 """
 
 import json
-from flask import Flask, render_template, request, redirect, url_for,session, jsonify
+from flask import Flask, render_template, request, redirect, url_for,session, jsonify, send_file
 from equipment_manager import EquipmentManager
 from werkzeug.security import check_password_hash, generate_password_hash
 import logging, subprocess
@@ -223,10 +223,25 @@ def signup():
 
 @app.route('/voir_logs')
 def voir_logs():
-    with open('app.log', 'r', encoding='ISO-8859-1') as log_file:
-        logs = log_file.read()
+    log_lines =  []
 
-    return render_template('logs.html', logs=logs)
+    with open('app.log', 'r', encoding='ISO-8859-1') as log_file:
+        # log = log_file.read()
+
+        # Lire les dernières lignes du fichier (par exemple, 100 lignes)
+        log_lines = log_file.readlines()[-100:]
+
+    return render_template('logs.html', logs=log_lines)
+
+@app.route('/download_logs')
+def download_logs():
+    # Le chemin complet vers votre fichier de logs
+    log_file_path = 'app.log'
+
+    # Nom du fichier de téléchargement
+    download_filename = 'logs.txt'
+
+    return send_file(log_file_path, as_attachment=True, download_name=download_filename)
 
 ############ affichage de la liste des equipemnts
 @app.route('/liste_equipements')
