@@ -5,6 +5,8 @@
     <title>Liste des équipements</title>
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='table.css') }}">
+    <script src="{{ url_for('static', filename='toggle.js') }}"></script>
 </head>
 <body>
     {% include 'navbar.html' %}
@@ -41,12 +43,55 @@
             </select>
             <button type="submit">Afficher les informations</button>
         </form>
+
+        <table>
+            <tr>
+                <th>N°</th>
+                <th>Nom</th>
+                <th>Adresse IP</th>
+                <th>Action</th>
+            </tr>
+            {% for equipment in equipment_list %}
+                <tr class="clickable" onclick="submitForm(this);">
+                    <td>{{ loop.index }}</td>
+                    <td>{{ equipment.Nom }}</td>
+                    <td>{{ equipment.AdresseIP }}</td>
+                    <td>
+                        <form action="/get_equipment_info" method="post" style="display: inline;">
+                            <input type="hidden" name="selected_equipment" value="{{ equipment.AdresseIP }}">
+                            <button type="submit" id="infoButton{{ loop.index }}">Infos</button>
+                        </form>
+                        <form action="/edit_equipment" method="post" style="display: inline;">
+                            <input type="hidden" name="nom" value="{{ equipment.Nom }}">
+                            <input type="hidden" name="adresse_ip" value="{{ equipment.AdresseIP }}">
+                            <button type="submit">Modifier</button>
+                        </form>
+                        <form action="/remove_equipment" method="post" style="display: inline;">
+                            <input type="hidden" name="nom" value="{{ equipment.Nom }}">
+                            <input type="hidden" name="adresse_ip" value="{{ equipment.AdresseIP }}">
+                            <button type="submit">Supprimer</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+
     </div>
     
     <!-- ... autres éléments de la page ... -->
     {% include 'footer.html' %}
 
-    <script src="{{ url_for('static', filename='toggle.js') }}"></script>
+    <script>
+        function submitForm(row) {
+            // Récupérer le bouton Infos correspondant à la ligne
+            var infoButton = row.querySelector('button[id^="infoButton"]');
+    
+            // Déclencher le clic sur le bouton Infos
+            if (infoButton) {
+                infoButton.click();
+            }
+        }
+    </script>
 
 </body>
 </html>
