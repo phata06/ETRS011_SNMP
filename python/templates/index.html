@@ -4,6 +4,9 @@
     <title>APP SNMP - ACCUEIL</title>
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='toggle.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="{{ url_for('static', filename='form.js') }}"></script>
 
     <style>
 
@@ -25,21 +28,43 @@
 
     <div class="main">
         <h2>Ajouter un équipement</h2>
-        <form action="/add_equipment" method="post">
+        <form action="/add_equipment" method="post" id="addEquipementForm">
             <label for="nom">Nom:</label>
             <input type="text" name="nom" required><br>
 
             <label for="adresse_ip">Adresse IP:</label>
             <input type="text" name="adresse_ip" required pattern="^(\d{1,3}\.){3}\d{1,3}$">
 
-            <label for="port">Port:</label>
-            <input type="text" name="port" required><br>
+            <div id="snmpv2Fields">
+                <label for="port">Port:</label>
+                <input type="text" id="portInput" name="port" required><br>
 
-            <label for="communaute">Communauté:</label>
-            <input type="text" name="communaute" required><br>
+                <label for="communaute">Communauté:</label>
+                <input type="text" id="communauteInput" name="communaute" required><br>
 
-            <label for="oids">OIDs (séparés par des virgules):</label>
-            <input type="text" name="oid" pattern="^(\d+(\.\d+)*)?$"><br>
+                <label for="oids">OIDs (séparés par des virgules):</label>
+                <input type="text" name="oid" pattern="^(\d+(\.\d+)*)?$"><br>
+            </div>
+
+            <div id="snmpv3Fields" style="display: none;">
+                <label for="username">Nom d'utilisateur :</label>
+                <input type="text" id="username" name="username"><br>
+
+                <label for="auth_protocol">Protocole d'authentification :</label>
+                <input type="text" id="auth_protocol" name="auth_protocol"><br>
+
+                <label for="auth_password">Mot de passe d'authentification :</label>
+                <input type="password" id="auth_password" name="auth_password"><br>
+
+                <label for="privacy_protocol">Protocole de confidentialité :</label>
+                <input type="text" id="privacy_protocol" name="privacy_protocol"><br>
+
+                <label for="privacy_password">Mot de passe de confidentialité :</label>
+                <input type="password" id="privacy_password" name="privacy_password"><br>
+            </div>
+
+            <label for="snmpv3">SNMPv3 :</label>
+            <input type="checkbox" id="snmpv3" name="snmpv3" onclick="toggleSNMPv3Fields()"><br>
 
             <button type="submit">Ajouter</button>
         </form>
@@ -50,7 +75,8 @@
         </div>
         {% endif %}
 
-        <script>
+        <!--
+            <script>
             document.addEventListener('DOMContentLoaded', function () {
                 // Sélectionnez le bouton "Voir les logs" par son ID
                 var voirLogsButton = document.getElementById('voir-logs');
@@ -61,7 +87,10 @@
                     window.location.href = '/voir_logs';
                 });
             });
-        </script>
+            </script>
+        -->
+
+        
 
 
         {{ session.logged_in }}
@@ -69,7 +98,7 @@
 
 {% include 'footer.html' %}
 
-<script src="{{ url_for('static', filename='toggle.js') }}"></script>
+
 
 
 </body>

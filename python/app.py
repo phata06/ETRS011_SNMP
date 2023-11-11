@@ -33,7 +33,7 @@ logging.basicConfig(filename='app.log', level=logging.INFO, format='%(asctime)s 
 
 
 app = Flask(__name__)
-manager = EquipmentManager('equip.js')
+manager = EquipmentManager('equip.json')
 users_data = {}
 # Configurez le système de journalisation
 
@@ -89,6 +89,35 @@ def add_equipment():
     manager.add_equipment(nom, adresse_ip, port, communaute)
     return redirect(url_for('index'))
 
+####### Partie ajout équipement SNMP V3
+@app.route('/add_equipmentv3', methods=['POST'])
+def add_equipmentv3():
+    print("ajout equipemenn snmp v3")
+    nom = request.form['nom']
+    adresse_ip = request.form['adresse_ip']
+    username = request.form['username']
+    auth_protocol = request.form['auth_protocol']
+    auth_password = request.form['auth_password']
+    privacy_protocol = request.form['privacy_protocol']
+    privacy_password = request.form['privacy_password']
+
+    #----------execution du code pour vérification--------------------------
+    if etat_SNMP==True:
+        commande = './multi_SNMP_v3.sh ' + adresse_ip + ' ' + username + ' ' + auth_protocol + ' ' + auth_password + ' ' + privacy_protocol + ' ' + privacy_password
+        process = subprocess.Popen(commande, shell=True, stdout=subprocess.PIPE)
+        sortie = process.stdout.read().decode()
+
+        if sortie.strip():
+            msg_add_equipement = "équipement enregistré"
+        else:
+            msg_add_equipement = "l'équipement est introuvable"
+    else:
+        msg_add_equipement = "Le Controlleur est désactivé"
+
+    session['msgAddEquipement'] = msg_add_equipement  # Enregistrez le message dans la session
+    manager.add_equipment_v3(nom, adresse_ip, username, auth_protocol, auth_password, privacy_protocol, privacy_password)
+    return redirect(url_for('index'))
+
 @app.route('/remove_equipment', methods=['POST'])
 def remove_equipment():
     nom = request.form['nom']
@@ -138,12 +167,6 @@ def login():
         return render_template('auth.html', msgAlert=msg_alert)
 
     return render_template('auth.html')
-
-
-
-
-
-
 
 
 @app.route('/logout')

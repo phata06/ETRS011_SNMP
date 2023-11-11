@@ -17,6 +17,11 @@
             {% for equipment in equipment_list %}
                 <li>
                     {{ equipment.Nom }} ({{ equipment.AdresseIP }})
+                    <form action="/edit_equipment" method="post" style="display: inline;">
+                        <input type="hidden" name="nom" value="{{ equipment.Nom }}">
+                        <input type="hidden" name="adresse_ip" value="{{ equipment.AdresseIP }}">
+                        <button type="submit">Modifier</button>
+                    </form>
                     <form action="/remove_equipment" method="post" style="display: inline;">
                         <input type="hidden" name="nom" value="{{ equipment.Nom }}">
                         <input type="hidden" name="adresse_ip" value="{{ equipment.AdresseIP }}">

@@ -28,6 +28,11 @@ class EquipmentManager:
         with open(self.filename, 'w') as file:
             json.dump(equipment_info, file, indent=4)
 
+    def save_equipment_list_v3(self):
+        equipment_info = {'equipements': self.equipment_list}
+        with open(self.filename, 'w') as file:
+            json.dump(equipment_info, file, indent=8)
+
     def add_equipment(self, nom, adresse_ip, port, community):
         for equipement in self.equipment_list:
             if equipement['Nom'] == nom and equipement['AdresseIP'] == adresse_ip:
@@ -37,7 +42,9 @@ class EquipmentManager:
         self.equipment_list.append(new_equipment)
         self.save_equipment_list()
 
-    def add_equipment_v3(self, nom, adresse_ip, username, auth_protocol):
+    #### Partie ajout d'un équipement SNMP V3
+    def add_equipment_v3(self, nom, adresse_ip, username, auth_protocol, auth_password, privacy_protocol, privacy_password):
+        print("ajout equipement snmp v3 dans le json")
         for equipement in self.equipment_list:
             if equipement['Nom'] == nom and equipement['AdresseIP'] == adresse_ip:
                 print(f"L'équipement '{nom}' avec l'adresse IP '{adresse_ip}' existe déjà.")
@@ -53,7 +60,7 @@ class EquipmentManager:
             'PrivacyPassword': privacy_password
             }
         self.equipment_list.append(new_equipment)
-        self.save_equipment_list()
+        self.save_equipment_list_v3()
 
     def remove_equipment(self, nom, adresse_ip):
         for equipement in self.equipment_list:
