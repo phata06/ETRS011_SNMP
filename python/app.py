@@ -10,6 +10,8 @@ from flask import Flask, render_template, request, redirect, url_for,session, js
 from equipment_manager import EquipmentManager
 from werkzeug.security import check_password_hash, generate_password_hash
 import logging, subprocess
+import schedule
+import time
 
 logging.basicConfig( level=logging.DEBUG, filename='app.log')
 
@@ -46,6 +48,50 @@ def load_users_data():
             return json.load(f)
     except FileNotFoundError:
         return {}
+
+# Fonction pour récupérer les données des agents SNMP
+def collect_snmp_data():
+    equipment_list = manager.get_equipment_list()
+
+    if etat_SNMP==True:
+        print("Collecting SNMP data...")
+
+        for equipment in equipment_list:
+            nom = equipment['nom']
+            adresse_ip = equipment['AdresseIP']
+            if equipment['SNMP'] == 'v3':
+                username = equipment['Username']
+                auth_protocol = equipment['AuthProtocol']
+                auth_password = equipment['AuthPassword']
+                privacy_protocol = equipment['PrivacyProtocol']
+                privacy_password = equipment['PrivacyPassword']
+
+                commande = './multi_SNMP_v3.sh ' + adresse_ip + ' ' + username + ' ' + auth_protocol + ' ' + auth_password + ' ' + privacy_protocol + ' ' + privacy_password
+                process = subprocess.Popen(commande, shell=True, stdout=subprocess.PIPE)
+                sortie = process.stdout.read().decode()
+            else:
+                communaute = equipment['community']
+
+                commande = './multi_SNMP_v2c.sh ' + communaute + ' ' + adresse_ip
+                process = subprocess.Popen(commande, shell=True, stdout=subprocess.PIPE)
+                sortie = process.stdout.read().decode()
+
+            if sortie.strip():
+                OID = sortie.split('\n')
+                for i, ligne in enumerate(OID):
+                    OID[i] = ligne[:-1]
+
+                manager.add_data_equip(nom, adresse_ip, OID)
+
+
+# Planifiez la fonction pour s'exécuter toutes les 5 minutes (modifiable selon vos besoins)
+schedule.every(5).minutes.do(collect_snmp_data)
+
+# Fonction pour exécuter la planification en arrière-plan
+def job():
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
 
 
 @app.route('/')
@@ -124,7 +170,7 @@ def remove_equipment():
     adresse_ip = request.form['adresse_ip']
     manager.remove_equipment(nom, adresse_ip)
     return redirect(url_for('liste_equipements'))
-##     code pour modifier un equipement 
+##     code pour modifier un equipement
 @app.route('/edit_equipment', methods=['POST'])
 def edit_equipment():
     nom = request.form['nom']
@@ -261,5 +307,8 @@ logging.info("Ceci est un message de journalisation d'information.")
 
 
 if __name__ == "__main__":
+    from threading import Thread
+    Thread(target=job).start()
+
     from waitress import serve
     serve(app, host="0.0.0.0", port=9000)

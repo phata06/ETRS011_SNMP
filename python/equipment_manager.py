@@ -31,7 +31,8 @@ class EquipmentManager:
     def save_equipment_list_v3(self):
         equipment_info = {'equipements': self.equipment_list}
         with open(self.filename, 'w') as file:
-            json.dump(equipment_info, file, indent=8)
+            json.dump(equipment_info, file, indent=4)
+
 
     def add_equipment(self, nom, adresse_ip, port, community):
         for equipement in self.equipment_list:
@@ -51,7 +52,7 @@ class EquipmentManager:
                 return
         new_equipment = {
             'Nom': nom,
-            'AdresseIP': adresse_ip, 
+            'AdresseIP': adresse_ip,
             'SNMP': 'v3',
             'Username': username,
             'AuthProtocol': auth_protocol,
@@ -71,7 +72,7 @@ class EquipmentManager:
 
     def get_equipment_list(self):
         return self.equipment_list
-    
+
     def update_equipment(self, nom, adresse_ip, new_port, new_community):
         for equipement in self.equipment_list:
             if equipement['Nom'] == nom and equipement['AdresseIP'] == adresse_ip:
@@ -79,6 +80,26 @@ class EquipmentManager:
                 equipement['community'] = new_community
                 self.save_equipment_list()
                 return
+
+    def add_data_equip(self, nom, adresse_ip, oid):
+        # Charger le contenu du fichier JSON existant
+        with open(self.filename, 'r') as file:
+            equipements_data = json.load(file)
+
+        # Modifier les données en mémoire
+        for equipement in equipements_data.get('equipements', []):
+            if equipement['Nom'] == nom and equipement['AdresseIP'] == adresse_ip:
+                # Ajouter les données que vous recevez, par exemple :
+                equipement['OID']['1.3.6.1.2.1.4.20.1.1'] = oid[1]
+                equipement['OID']['1.3.6.1.2.1.1.5'] = oid[2]
+                equipement['OID']['1.3.6.1.2.1.1.4'] = oid[3]
+                equipement['OID']['1.3.6.1.2.1.1.1'] = oid[4]
+                equipement['OID']['1.3.6.1.2.1.1.6'] = oid[5]
+                equipement['OID']['1.3.6.1.2.1.1.3'] = oid[6]
+
+        # Sauvegarder les modifications dans le fichier JSON
+        with open(self.filename, 'w') as file:
+            json.dump(equipements_data, file, indent=4)  # Utilisez indent=4 pour une meilleure lisibilité du fichier
 
 # Utilisation de la classe EquipmentManager
 if __name__ == '__main__':
