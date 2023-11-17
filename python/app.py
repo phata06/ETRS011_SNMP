@@ -57,7 +57,7 @@ def collect_snmp_data():
         print("Collecting SNMP data...")
 
         for equipment in equipment_list:
-            nom = equipment['nom']
+            nom = equipment['Nom']
             adresse_ip = equipment['AdresseIP']
             if equipment['SNMP'] == 'v3':
                 username = equipment['Username']
