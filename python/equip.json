@@ -1,41 +1,37 @@
 {
-        "equipements": [
-                {
-                        "Nom": "tgtgt",
-                        "AdresseIP": "25.36.36.32",
-                        "port": "253",
-                        "community": "gtgt",
-                        "OIDs": []
-                },
-                {
-                        "Nom": "erer",
-                        "AdresseIP": "12.23.36.32",
-                        "port": "555",
-                        "community": "erer",
-                        "OIDs": []
-                },
-                {
-                        "Nom": "ffff",
-                        "AdresseIP": "23.36.32.36",
-                        "port": "222",
-                        "community": "fgg",
-                        "OIDs": []
-                },
-                {
-                        "Nom": "test_v2",
-                        "AdresseIP": "192.168.176.2",
-                        "port": "161",
-                        "community": "passprojet"
-                },
-                {
-                        "Nom": "test_v3",
-                        "AdresseIP": "192.168.140.140",
-                        "SNMP": "v3",
-                        "Username": "user1",
-                        "AuthProtocol": "SHA",
-                        "AuthPassword": "miracle2022",
-                        "PrivacyProtocol": "AES",
-                        "PrivacyPassword": "power2022"
-                }
-        ]
+    "equipements": [
+        {
+            "Nom": "test_v2",
+            "AdresseIP": "192.168.176.2",
+            "SNMP": "v2c",
+            "port": "161",
+            "community": "passprojet",
+            "OID": {
+                "1.3.6.1.2.1.4.20.1.1": "127.0.0.1;169.254.33.77;169.254.67.17;169.254.186.50;169.254.232.153;169.254.241.42;172.17.0.1;192.168.176.2",
+                "1.3.6.1.2.1.1.5": "\"Serveur NAS\"",
+                "1.3.6.1.2.1.1.4": "\"florent.lorne@univ-savoie.fr\"",
+                "1.3.6.1.2.1.1.1": "\"Linux mau-nas1-176-2 3.10.105 #25556 SMP Sat Aug 28 02:14:22 CST 2021 x86_64\"",
+                "1.3.6.1.2.1.1.6": "\"Bocal Maurienne 59-59b\"",
+                "1.3.6.1.2.1.1.3": "(1427733684) 165 days, 5:55:36.84"
+            }
+        },
+        {
+            "Nom": "test_v3",
+            "AdresseIP": "192.168.140.140",
+            "SNMP": "v3",
+            "Username": "user1",
+            "AuthProtocol": "SHA",
+            "AuthPassword": "miracle2022",
+            "PrivacyProtocol": "AES",
+            "PrivacyPassword": "power2022",
+            "OID": {
+                "1.3.6.1.2.1.4.20.1.1": "192.168.140.140;192.168.170.2",
+                "1.3.6.1.2.1.1.5": "\"ise112-3-sw01.local.univ-savoie.fr\"",
+                "1.3.6.1.2.1.1.4": "",
+                "1.3.6.1.2.1.1.1": "\"Cisco IOS Software, C1000 Software (C1000-UNIVERSALK9-M), Version 15.2(8)E, RELEASE SOFTWARE (fc3)\r;http://www.cisco.com/techsupport\r;;",
+                "1.3.6.1.2.1.1.6": "",
+                "1.3.6.1.2.1.1.3": "(623435676) 72 days, 3:45:56.76"
+            }
+        }
+    ]
 }

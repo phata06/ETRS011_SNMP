@@ -25,6 +25,14 @@
         <p>Communauté: {{ equipment.community }}</p>
         <p>OIDs: {{ equipment.OIDs }}</p>
     {% endif %}
+
+    <br>
+
+    {% for oid, value in equipment['OID'].items() %}
+        <p>{{ oid }}: {{ value }}</p>
+    {% endfor %}
+
+
 </div>
 
 

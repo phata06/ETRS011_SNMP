@@ -1524,3 +1524,189 @@ WARNING:Journal_exemple:avertissement
 CRITICAL:Journal_exemple:erreur grave
 INFO:root:Ceci est un message de journalisation d'information.
 INFO:waitress:Serving on http://0.0.0.0:9000
+2023-11-11 16:56:35,526 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-11 16:56:35,526 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-11 16:56:35,527 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-11 16:56:35,527 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://0.0.0.0:9000
+2023-11-16 13:10:40,806 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-16 13:10:40,811 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-16 13:10:40,811 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-16 13:10:40,811 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://0.0.0.0:9000
+INFO:root:L'utilisateur root s'est connecté avec succès.
+2023-11-17 14:03:17,112 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-17 14:03:17,213 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-17 14:03:17,213 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-17 14:03:17,213 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://0.0.0.0:9000
+INFO:root:L'utilisateur root s'est connecté avec succès.
+DEBUG:schedule:Running job Job(interval=5, unit=minutes, do=collect_snmp_data, args=(), kwargs={})
+2023-11-17 14:11:19,972 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-17 14:11:19,972 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-17 14:11:19,972 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-17 14:11:19,972 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://0.0.0.0:9000
+DEBUG:schedule:Running job Job(interval=5, unit=minutes, do=collect_snmp_data, args=(), kwargs={})
+2023-11-17 14:19:27,717 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-17 14:19:27,717 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-17 14:19:27,718 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-17 14:19:27,718 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://0.0.0.0:9000
+2023-11-17 14:19:45,576 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-17 14:19:45,576 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-17 14:19:45,577 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-17 14:19:45,577 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://0.0.0.0:9000
+DEBUG:schedule:Running job Job(interval=1, unit=minutes, do=collect_snmp_data, args=(), kwargs={})
+DEBUG:schedule:Running job Job(interval=1, unit=minutes, do=collect_snmp_data, args=(), kwargs={})
+2023-11-17 14:23:04,431 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-17 14:23:04,431 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-17 14:23:04,431 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-17 14:23:04,431 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://0.0.0.0:9000
+DEBUG:schedule:Running job Job(interval=1, unit=minutes, do=collect_snmp_data, args=(), kwargs={})
+2023-11-17 14:26:58,384 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-17 14:26:58,384 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-17 14:26:58,384 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-17 14:26:58,384 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://0.0.0.0:9000
+DEBUG:schedule:Running job Job(interval=1, unit=minutes, do=collect_snmp_data, args=(), kwargs={})
+2023-11-17 14:34:29,635 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-17 14:34:29,635 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-17 14:34:29,635 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-17 14:34:29,636 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://0.0.0.0:9000
+DEBUG:schedule:Running job Job(interval=1, unit=minutes, do=collect_snmp_data, args=(), kwargs={})
+2023-11-17 14:39:00,563 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-17 14:39:00,563 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-17 14:39:00,563 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-17 14:39:00,563 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://0.0.0.0:9000
+DEBUG:schedule:Running job Job(interval=1, unit=minutes, do=collect_snmp_data, args=(), kwargs={})
+DEBUG:schedule:Running job Job(interval=1, unit=minutes, do=collect_snmp_data, args=(), kwargs={})
+2023-11-17 14:45:51,934 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-17 14:45:51,934 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-17 14:45:51,935 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-17 14:45:51,935 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://0.0.0.0:9000
+DEBUG:schedule:Running job Job(interval=1, unit=minutes, do=collect_snmp_data, args=(), kwargs={})
+ERROR:app:Exception on /get_equipment_info [POST]
+Traceback (most recent call last):
+  File "/home/user/.local/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/user/.local/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/user/.local/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/user/.local/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 238, in get_equipment_info
+    return render_template('equipment_info.html', equipment=selected_equipment)
+  File "/home/user/.local/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home/user/.local/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home/user/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/user/.local/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/media/user/Storage_Nicoprog/P/Semestre 9/ETRS011 - Projet Developpement/ETRS011_SNMP/python/templates/equipment_info.html", line 31, in top-level template code
+    <p>{{ equipment.OID.1.3.6.1.2.1.4.20.1.1 }}</p>
+  File "/home/user/.local/lib/python3.8/site-packages/jinja2/environment.py", line 466, in getitem
+    return obj[argument]
+jinja2.exceptions.UndefinedError: dict object has no element 1
+ERROR:app:Exception on /get_equipment_info [POST]
+Traceback (most recent call last):
+  File "/home/user/.local/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/user/.local/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/user/.local/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/user/.local/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 238, in get_equipment_info
+    return render_template('equipment_info.html', equipment=selected_equipment)
+  File "/home/user/.local/lib/python3.8/site-packages/flask/templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "/home/user/.local/lib/python3.8/site-packages/flask/templating.py", line 133, in _render
+    rv = template.render(context)
+  File "/home/user/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/user/.local/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/media/user/Storage_Nicoprog/P/Semestre 9/ETRS011 - Projet Developpement/ETRS011_SNMP/python/templates/equipment_info.html", line 31, in top-level template code
+    <p>{{ equipment.OID.1.3.6.1.2.1.4.20.1.1 }}</p>
+  File "/home/user/.local/lib/python3.8/site-packages/jinja2/environment.py", line 466, in getitem
+    return obj[argument]
+jinja2.exceptions.UndefinedError: dict object has no element 1
+DEBUG:schedule:Running job Job(interval=1, unit=minutes, do=collect_snmp_data, args=(), kwargs={})
+DEBUG:schedule:Running job Job(interval=1, unit=minutes, do=collect_snmp_data, args=(), kwargs={})
+DEBUG:schedule:Running job Job(interval=1, unit=minutes, do=collect_snmp_data, args=(), kwargs={})
+DEBUG:schedule:Running job Job(interval=1, unit=minutes, do=collect_snmp_data, args=(), kwargs={})
+2023-11-17 14:51:13,417 - Journal_exemple - DEBUG - Information-Debug
+DEBUG:Journal_exemple:Information-Debug
+2023-11-17 14:51:13,418 - Journal_exemple - INFO - Message info
+INFO:Journal_exemple:Message info
+2023-11-17 14:51:13,418 - Journal_exemple - WARNING - avertissement
+WARNING:Journal_exemple:avertissement
+2023-11-17 14:51:13,418 - Journal_exemple - CRITICAL - erreur grave
+CRITICAL:Journal_exemple:erreur grave
+INFO:root:Ceci est un message de journalisation d'information.
+INFO:waitress:Serving on http://0.0.0.0:9000
