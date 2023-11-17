@@ -46,12 +46,12 @@ class EquipmentManager:
             'port': port,
             'community': community,
             'OID': {
-                "1.3.6.1.2.1.4.20.1.1": "valeurOID1",
-                "1.3.6.1.2.1.1.5": "valeurOID2",
-                "1.3.6.1.2.1.1.4": "valeurOID3",
-                "1.3.6.1.2.1.1.1": "valeurOID4",
-                "1.3.6.1.2.1.1.6": "valeurOID5",
-                "1.3.6.1.2.1.1.3": "valeurOID6"
+                "ipAdEntAddr": "valeurOID1",
+                "sysName": "valeurOID2",
+                "sysContact": "valeurOID3",
+                "sysDescr": "valeurOID4",
+                "sysLocation": "valeurOID5",
+                "sysUpTime": "valeurOID6"
                 }
             }
         self.equipment_list.append(new_equipment)
@@ -74,12 +74,12 @@ class EquipmentManager:
             'PrivacyProtocol': privacy_protocol,
             'PrivacyPassword': privacy_password,
             'OID': {
-                "1.3.6.1.2.1.4.20.1.1": "valeurOID1",
-                "1.3.6.1.2.1.1.5": "valeurOID2",
-                "1.3.6.1.2.1.1.4": "valeurOID3",
-                "1.3.6.1.2.1.1.1": "valeurOID4",
-                "1.3.6.1.2.1.1.6": "valeurOID5",
-                "1.3.6.1.2.1.1.3": "valeurOID6"
+                "ipAdEntAddr": "valeurOID1",
+                "sysName": "valeurOID2",
+                "sysContact": "valeurOID3",
+                "sysDescr": "valeurOID4",
+                "sysLocation": "valeurOID5",
+                "sysUpTime": "valeurOID6"
                 }
             }
         self.equipment_list.append(new_equipment)
@@ -112,12 +112,12 @@ class EquipmentManager:
         for equipement in equipements_data.get('equipements', []):
             if equipement['Nom'] == nom and equipement['AdresseIP'] == adresse_ip:
                 # Ajouter les données que vous recevez, par exemple :
-                equipement['OID']['1.3.6.1.2.1.4.20.1.1'] = oid[0]
-                equipement['OID']['1.3.6.1.2.1.1.5'] = oid[1]
-                equipement['OID']['1.3.6.1.2.1.1.4'] = oid[2]
-                equipement['OID']['1.3.6.1.2.1.1.1'] = oid[3]
-                equipement['OID']['1.3.6.1.2.1.1.6'] = oid[4]
-                equipement['OID']['1.3.6.1.2.1.1.3'] = oid[5]
+                equipement['OID']['ipAdEntAddr'] = oid[0]
+                equipement['OID']['sysName'] = oid[1]
+                equipement['OID']['sysContact'] = oid[2]
+                equipement['OID']['sysDescr'] = oid[3]
+                equipement['OID']['sysLocation'] = oid[4]
+                equipement['OID']['sysUpTime'] = oid[5]
 
         # Sauvegarder les modifications dans le fichier JSON
         with open(self.filename, 'w') as file:

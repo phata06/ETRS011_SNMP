@@ -50,7 +50,9 @@ def load_users_data():
         return {}
 
 # Fonction pour récupérer les données des agents SNMP
+@app.route('/collect_snmp_data')
 def collect_snmp_data():
+    manager.collect_snmp_data()
     equipment_list = manager.get_equipment_list()
 
     if etat_SNMP==True:
@@ -77,6 +79,7 @@ def collect_snmp_data():
                 sortie = process.stdout.read().decode()
 
             if sortie.strip():
+                print(f"Finish collecting SNMP data for {adresse_ip}")
                 OID = sortie.split('\n')
                 for i, ligne in enumerate(OID):
                     OID[i] = ligne[:-1]
@@ -85,7 +88,7 @@ def collect_snmp_data():
 
 
 # Planifiez la fonction pour s'exécuter toutes les 5 minutes (modifiable selon vos besoins)
-schedule.every(5).minutes.do(collect_snmp_data)
+schedule.every(1).minutes.do(collect_snmp_data)
 
 # Fonction pour exécuter la planification en arrière-plan
 def job():
@@ -125,6 +128,11 @@ def add_equipment():
         sortie = process.stdout.read().decode()
 
         if sortie.strip():
+            OID = sortie.split('\n')
+            for i, ligne in enumerate(OID):
+                OID[i] = ligne[:-1]
+
+            manager.add_data_equip(nom, adresse_ip, OID)
             msg_add_equipement = "équipement enregistré"
         else:
             msg_add_equipement = "l'équipement est introuvable"
@@ -155,6 +163,11 @@ def add_equipmentv3():
 
         if sortie.strip():
             msg_add_equipement = "équipement enregistré"
+            OID = sortie.split('\n')
+            for i, ligne in enumerate(OID):
+                OID[i] = ligne[:-1]
+
+            manager.add_data_equip(nom, adresse_ip, OID)
         else:
             msg_add_equipement = "l'équipement est introuvable"
     else:
